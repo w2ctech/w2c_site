@@ -27,7 +27,8 @@ export function proxy(request: NextRequest) {
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
     pathname.startsWith("/assets") ||
-    pathname.match(/\.(svg|ico|png|jpg|jpeg|webp|gif|css|js|woff2?|xml|webmanifest|txt)$/)
+    pathname.startsWith("/.well-known") ||
+    pathname.match(/\.(svg|ico|png|jpg|jpeg|webp|gif|css|js|woff2?|xml|webmanifest|txt|html)$/)
   ) {
     return NextResponse.next();
   }
