@@ -1,11 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1e3a8a"/>
-      <stop offset="100%" style="stop-color:#4f46e5"/>
+      <stop offset="0%" style="stop-color:#12121f"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <text x="600" y="280" font-family="Arial,sans-serif" font-size="80" font-weight="bold" fill="white" text-anchor="middle">w2ctech</text>
-  <text x="600" y="360" font-family="Arial,sans-serif" font-size="32" fill="#93c5fd" text-anchor="middle">Digital Agency That Thrives on Your Success</text>
+  <circle cx="950" cy="150" r="180" fill="none" stroke="#d4a83a" stroke-width="1" opacity="0.3"/>
+  <circle cx="950" cy="150" r="120" fill="none" stroke="#d4a83a" stroke-width="1" opacity="0.2"/>
+  <circle cx="950" cy="150" r="60" fill="none" stroke="#d4a83a" stroke-width="1" opacity="0.15"/>
+  <circle cx="200" cy="480" r="100" fill="none" stroke="#d4a83a" stroke-width="1" opacity="0.15"/>
+  <text x="600" y="240" font-family="Arial,sans-serif" font-size="72" font-weight="bold" fill="white" text-anchor="middle">W2C Tech</text>
+  <text x="600" y="310" font-family="Arial,sans-serif" font-size="28" fill="#d4a83a" text-anchor="middle">Web to Cloud</text>
+  <text x="600" y="380" font-family="Arial,sans-serif" font-size="24" fill="#8888aa" text-anchor="middle">Software · AI · Cloud — built to scale with you</text>
 </svg>

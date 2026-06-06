@@ -1,41 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Navbar } from "@/components/ui/Navbar";
+import { Footer } from "@/components/ui/Footer";
 import StructuredData from "@/components/StructuredData";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const BASE_URL = "https://w2ctech.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "w2ctech - Digital Agency That Thrives on Your Success",
-    template: "%s | w2ctech",
+    default: "W2C Tech — Web to Cloud · Software, AI & Cloud",
+    template: "%s | W2C Tech",
   },
   description:
-    "We are a team of 40 web experts with over 12 years of experience in website building and marketing. Web design, development, and digital marketing services to help businesses grow online.",
+    "W2C Tech is a software solutions and consulting partner — custom software, AI systems, cloud and staff augmentation for teams across the EU, US and India.",
   keywords: [
-    "web design",
-    "web development",
-    "digital marketing",
-    "website building",
-    "SEO",
-    "w2ctech",
-    "Los Angeles web agency",
-    "custom websites",
+    "software development", "AI systems", "cloud computing", "devops",
+    "staff augmentation", "web development", "W2C Tech", "India",
   ],
-  authors: [{ name: "w2ctech" }],
-  creator: "w2ctech",
-  publisher: "w2ctech",
+  authors: [{ name: "W2C Tech" }],
+  creator: "W2C Tech",
+  publisher: "W2C Tech",
   robots: {
     index: true,
     follow: true,
@@ -51,58 +36,48 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: BASE_URL,
-    siteName: "w2ctech",
-    title: "w2ctech - Digital Agency That Thrives on Your Success",
+    siteName: "W2C Tech",
+    title: "W2C Tech — Web to Cloud · Software, AI & Cloud",
     description:
-      "Team of 40 web experts with 12+ years experience. Web design, development, and digital marketing to help businesses grow online.",
-    images: [
-      {
-        url: `${BASE_URL}/og-image.svg`,
-        width: 1200,
-        height: 630,
-        alt: "w2ctech - Digital Agency",
-      },
-    ],
+      "Custom software, AI systems, and cloud for ambitious companies across the EU, US and India.",
+    images: [{ url: `${BASE_URL}/og-image.svg`, width: 1200, height: 630, alt: "W2C Tech" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "w2ctech - Digital Agency That Thrives on Your Success",
+    title: "W2C Tech — Web to Cloud · Software, AI & Cloud",
     description:
-      "Team of 40 web experts with 12+ years experience. Web design, development, and digital marketing services.",
+      "Custom software, AI systems, and cloud for ambitious companies across the EU, US and India.",
     images: [`${BASE_URL}/og-image.svg`],
-    creator: "@w2ctech",
   },
-  alternates: {
-    canonical: BASE_URL,
-  },
-  verification: {
-    google: "ADD_YOUR_GOOGLE_VERIFICATION_CODE",
-  },
-  category: "technology",
-  icons: {
-    icon: "/favicon.svg",
-    apple: "/icon.svg",
-  },
+  alternates: { canonical: BASE_URL },
+  icons: { icon: "/favicon.svg", apple: "/icon.svg" },
   manifest: "/manifest.webmanifest",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}
-    >
+    <html lang="en">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;450;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+          rel="stylesheet"
+        />
         <StructuredData />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#2563eb" />
+        <meta name="theme-color" content="#1a1a2e" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{document.documentElement.className=localStorage.getItem('w2c-theme')==='light'?'theme-light':''}catch(e){document.documentElement.className=''}`,
+          }}
+        />
       </head>
-      <body className="min-h-screen bg-white text-gray-900 antialiased">
+      <body>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

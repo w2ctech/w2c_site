@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   trailingSlash: false,
   poweredByHeader: false,
   compress: true,
+  images: {
+    unoptimized: true,
+  },
 
   async headers() {
     return [

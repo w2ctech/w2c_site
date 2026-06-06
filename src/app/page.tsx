@@ -1,29 +1,25 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import About from "@/components/About";
-import Clients from "@/components/Clients";
-import WhyChooseUs from "@/components/WhyChooseUs";
-import CTA from "@/components/CTA";
-import TrustedPartners from "@/components/TrustedPartners";
-import Subscribe from "@/components/Subscribe";
-import Footer from "@/components/Footer";
+import { Hero } from "@/components/sections/Hero";
+import { Partners } from "@/components/sections/Partners";
+import { Capabilities } from "@/components/sections/Capabilities";
+import { Approach } from "@/components/sections/Approach";
+import { AboutTeaser } from "@/components/sections/AboutTeaser";
+import { Cases } from "@/components/sections/Cases";
+import { FoundersVision } from "@/components/sections/FoundersVision";
+import { WhyUs } from "@/components/sections/WhyUs";
+import { CTASection } from "@/components/ui/PageHero";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <Services />
-        <About />
-        <Clients />
-        <WhyChooseUs />
-        <CTA />
-        <TrustedPartners />
-        <Subscribe />
-      </main>
-      <Footer />
-    </>
+    <main>
+      <Hero />
+      <Partners />
+      <Capabilities />
+      <Approach />
+      <Cases />
+      <AboutTeaser />
+      <FoundersVision />
+      <WhyUs />
+      <CTASection variant="ink" />
+    </main>
   );
 }
