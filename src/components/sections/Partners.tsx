@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const PARTNERS = [
   { name: "Rebelle", logo: "/assets/rebelle.png" },
   { name: "Vinted", logo: "/assets/vinted.png" },
@@ -23,11 +21,9 @@ export function Partners() {
             <div key={i} className="flex items-center justify-center min-w-[120px] px-4">
               {p.logo ? (
                 <div className="h-10 flex items-center">
-                  <Image
+                  <img
                     src={p.logo}
                     alt={p.name}
-                    width={120}
-                    height={40}
                     className="h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity logo-lighten"
                   />
                 </div>

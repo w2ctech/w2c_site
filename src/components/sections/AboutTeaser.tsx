@@ -31,7 +31,7 @@ export function AboutTeaser() {
           </Reveal>
           <Reveal delay={120}>
             <p className="text-[clamp(18px,2vw,22px)] text-tx-2 leading-relaxed mt-[18px]">
-              We&apos;re a focused, senior team — small enough to care, sharp enough to build big.
+              We're a focused, senior team — small enough to care, sharp enough to build big.
               We help clients use the web, cloud and AI to their full potential, with people you can count on.
             </p>
           </Reveal>
@@ -48,7 +48,7 @@ export function AboutTeaser() {
               <Card>
                 <span className="font-mono text-xs text-accent-ink tracking-[0.1em]">VISION</span>
                 <p className="mt-3 text-[16px] text-tx-2">
-                  To be a global leader in scalable, intelligent software that strengthens our clients&apos; businesses.
+                  To be a global leader in scalable, intelligent software that strengthens our clients' businesses.
                 </p>
               </Card>
             </Reveal>

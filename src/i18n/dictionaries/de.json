@@ -1,0 +1,157 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "services": "Leistungen",
+    "about": "Über uns",
+    "careers": "Karriere",
+    "contact": "Kontakt",
+    "getQuote": "Angebot einholen"
+  },
+  "hero": {
+    "eyebrow": "Web to Cloud · Software & KI",
+    "title": "Software, KI & Cloud, gebaut um mit Ihnen zu wachsen.",
+    "subtitle": "Ein kleines, erfahrenes Team, das Großes baut. W2C Tech liefert maßgeschneiderte Software, intelligente KI-Systeme und Cloud-Lösungen — für ambitionierte Unternehmen in der EU, den USA und Indien. Gegründet 2020.",
+    "cta1": "Projekt starten",
+    "cta2": "Leistungen entdecken"
+  },
+  "stats": [
+    ["2020", "Gegründet — schlank und effizient"],
+    ["4+", "Weltweite Kunden betreut"],
+    ["3", "Kontinente bedient"],
+    ["14+", "Jahre Gründererfahrung"]
+  ],
+  "partners": {
+    "heading": "Partner & Kunden, für die wir bauen"
+  },
+  "capabilities": {
+    "eyebrow": "Was wir tun",
+    "heading": "Ein Partner, der gesamte Stack.",
+    "subtitle": "Wir lösen Probleme von Anfang bis Ende — Strategie, Entwicklung, KI und die Leute, die es betreiben. Keine Übergaben, keine Lücken.",
+    "items": [
+      { "t": "Software & SaaS-Lösungen", "d": "Maßgeschneiderte Produktentwicklung — SaaS-Plattformen, Web-Apps, interne Tools und APIs, gebaut für Langlebigkeit und Skalierbarkeit." },
+      { "t": "KI-Systeme & KI-gestützte Software", "d": "LLM-Funktionen, ML-Modelle, intelligente Automatisierung und KI, integriert in Ihre bestehende Software." },
+      { "t": "Cloud & DevOps", "d": "Das „to Cloud\" in Web to Cloud — Migrationen, Infrastruktur, CI/CD und Plattformen, die stabil laufen." },
+      { "t": "Personalverstärkung", "d": "Geschulte, geprüfte Ingenieure und komplette Teams zu transparenter Stundenabrechnung — über unser vertrauenswürdiges Partnernetzwerk." }
+    ]
+  },
+  "approach": {
+    "eyebrow": "Die W2C-Methode",
+    "heading": "Von der Idee zur Produktion, und darüber hinaus.",
+    "subtitle": "Jedes Engagement basiert auf dem gleichen Glauben: Skalierbare Systeme bauen, KI dort einsetzen, wo sie sich lohnt, und lange genug bleiben, um sie wachsen zu sehen.",
+    "aiTag": "KI in jede Ebene integriert — nicht nachträglich angehängt.",
+    "steps": [
+      ["Entdecken", "Wir lernen Ihre Domain kennen, kartieren das Problem und entwerfen eine Architektur, die nächstes Jahr nicht neu gebaut werden muss."],
+      ["Bauen", "Erfahrene Ingenieure liefern in kurzen Zyklen — Software, KI-Modelle und Cloud-Infrastruktur, schnell in Produktion."],
+      ["Skalieren", "Wir härten, automatisieren und erweitern das System — und das Team — wenn Ihr Traffic und Ihre Ambitionen wachsen."]
+    ]
+  },
+  "cases": {
+    "eyebrow": "Erfolgsgeschichten",
+    "heading": "Vertraut von Teams, die liefern.",
+    "subtitle": "Von EU-Marktplätzen bis zu US-Analytics — langfristige Partnerschaften, keine einmaligen Projekte."
+  },
+  "aboutTeaser": {
+    "eyebrow": "Wer wir sind",
+    "heading": "Ein kleines Team, das große Systeme baut.",
+    "subtitle": "Wir sind ein fokussiertes, erfahrenes Team — klein genug, um sich zu kümmern, scharf genug, um Großes zu bauen. Wir helfen Kunden, das Web, die Cloud und KI voll auszuschöpfen.",
+    "mission": "Kunden helfen, das Internet und KI durch erschwingliche, effektive, maßgeschneiderte Software zu nutzen.",
+    "vision": "Ein globaler Marktführer für skalierbare, intelligente Software zu werden, die die Unternehmen unserer Kunden stärkt.",
+    "cta": "Team kennenlernen"
+  },
+  "founders": {
+    "eyebrow": "Vision der Gründer",
+    "quote": "Wir haben klein angefangen, um Großes zu bauen — skalierbare Systeme, dauerhafte Partnerschaften und KI, die ihren Platz verdient."
+  },
+  "whyUs": {
+    "eyebrow": "Warum wir",
+    "heading": "Der richtige Partner, zu einem fairen Preis.",
+    "subtitle": "Wir haben die Expertise, um unparteiische Beratung und Dienstleistungen anzubieten — und wir wollen wirklich, dass Ihr Unternehmen sein Potenzial erreicht.",
+    "points": [
+      ["Sie werden gehört", "Wir hören zuerst zu und wählen dann die Lösung, die wirklich passt — nicht die, die am meisten abrechnet."],
+      ["Wir behandeln es als unser Eigenes", "Ein aufrichtiges Interesse an Ihrem Ergebnis. Ihre Roadmap, Uptime und Wachstum werden auch zu unseren."],
+      ["Ehrliche, faire Preise", "Senior-Expertise zu vernünftigen Preisen, mit flexiblen Engagement- und Personalmodellen."],
+      ["Gebaut für Skalierung", "Architektur- und KI-Entscheidungen für dort, wo Sie hingehen, nicht nur wo Sie sind."]
+    ]
+  },
+  "cta": {
+    "eyebrow": "Ein Projekt im Sinn?",
+    "heading": "Lassen Sie uns etwas bauen, das mit Ihnen wächst.",
+    "subtitle": "Sagen Sie uns, wohin Sie wollen. Wir bringen die Ingenieure, die KI und die Cloud, um Sie dorthin zu bringen.",
+    "cta1": "Kontakt aufnehmen",
+    "cta2": "Leistungen ansehen"
+  },
+  "footer": {
+    "desc": "Web to Cloud. Wir bauen skalierbare Software, intelligente KI-Systeme und die Teams, die sie betreiben — für Partner in der EU, den USA und Indien.",
+    "company": "Unternehmen",
+    "capabilities": "Fähigkeiten",
+    "contact": "Kontakt",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "disclaimer": "Haftungsausschluss",
+    "builtFor": "Für Skalierung gebaut",
+    "copyright": "W2C Tech — Web to Cloud",
+    "startProject": "Projekt starten",
+    "offices": "Drei Büros · EU · US · Indien"
+  },
+  "services": {
+    "kicker": "Leistungen",
+    "title": "Alles von Web bis Cloud — und die KI dazwischen.",
+    "subtitle": "Sechs Fähigkeiten, ein verantwortlicher Partner. Kombinieren Sie, oder geben Sie uns das Ganze. So oder so bekommen Sie erfahrene Leute, die das Ergebnis verantworten.",
+    "getQuote": "Angebot einholen",
+    "howWeWork": "So arbeiten wir",
+    "engagementEyebrow": "Engagement-Modelle",
+    "engagementHeading": "Arbeiten Sie mit uns so, wie es passt."
+  },
+  "about": {
+    "kicker": "Über W2C Tech",
+    "title": "Ein Software-Team, das Unternehmen wachsen lässt, nicht nur Code.",
+    "subtitle": "Ein kleines, erfahrenes Team, das Großes baut. Seit 2020 liefern wir Software, KI und Cloud-Systeme für Partner in der EU, den USA und Indien.",
+    "storyEyebrow": "Unsere Geschichte",
+    "storyHeading": "Von Web zu Cloud — und jetzt zu KI.",
+    "story1": "W2C — Web to Cloud — begann mit einer einfachen Idee: Unternehmen helfen, das Internet voll auszuschöpfen. Seit 2020 ist diese Mission auch auf Cloud und KI angewachsen.",
+    "story2": "Heute liefern wir Software, intelligente KI-Systeme und die Cloud-Plattformen, die sie betreiben — und wenn Teams mehr Hände brauchen, stellen wir geprüfte Ingenieure über unser vertrauenswürdiges Partnernetzwerk bereit.",
+    "leadershipEyebrow": "Führung",
+    "leadershipHeading": "Die Menschen, die uns voranbringen.",
+    "valuesEyebrow": "Unsere Werte",
+    "valuesHeading": "Wie wir auftreten, bei jedem Projekt.",
+    "valuesTag": "Vertrauenswürdige Partner für Personal in jeder Größenordnung.",
+    "mission": "Kunden befähigen, online zu gewinnen.",
+    "missionText": "Unseren Kunden helfen, das Internet und KI voll auszuschöpfen — durch erschwingliche, effektive, maßgeschneiderte Design-, Software- und Marketinglösungen.",
+    "vision": "Ein globaler Marktführer für skalierbare Software.",
+    "visionText": "Ein globaler Marktführer für einzigartige, intelligente Web- und Cloud-Lösungen zu werden, die die Produktivität und Geschäftsstärke unserer Kunden verbessern."
+  },
+  "careers": {
+    "kicker": "Karriere",
+    "title": "Entwickle Software, die zählt — mit Menschen, die hinter dir stehen.",
+    "subtitle": "Wir sind ein kleines, erfahrenes Team, das für Kunden weltweit liefert. Wenn du Eigenverantwortung, Skalierung und ein bisschen KI magst, wirst du dich hier wohlfühlen.",
+    "seeRoles": "Offene Stellen ansehen",
+    "aboutTeam": "Über das Team",
+    "perksEyebrow": "Warum zu W2C",
+    "perksHeading": "Anspruchsvolle Arbeit, menschliches Tempo.",
+    "rolesEyebrow": "Offene Stellen",
+    "rolesHeading": "Finde deinen Platz.",
+    "rolesNote": "Deine genaue Rolle nicht dabei? Wir sprechen immer mit guten Ingenieuren — schick uns einfach eine Nachricht.",
+    "apply": "Für diese Stelle bewerben"
+  },
+  "contact": {
+    "kicker": "Kontakt",
+    "title": "Lassen Sie uns darüber sprechen, was wir zusammen bauen können.",
+    "subtitle": "Sagen Sie uns, wohin Sie wollen. Wir bringen die Ingenieure, die KI und die Cloud — normalerweise mit einer Antwort innerhalb eines Geschäftstages.",
+    "formTitle": "Gespräch beginnen",
+    "name": "Ihr Name",
+    "email": "Geschäftliche E-Mail",
+    "company": "Unternehmen",
+    "companyOptional": "optional",
+    "service": "Was benötigen Sie?",
+    "selectService": "Leistung auswählen…",
+    "projectDetails": "Projektdetails",
+    "projectPlaceholder": "Ein paar Zeilen darüber, was Sie bauen und wo Sie Hilfe benötigen…",
+    "send": "Nachricht senden",
+    "thanks": "Danke — Nachricht erhalten.",
+    "thanksText": "Wir werden Ihre Nachricht prüfen und uns innerhalb eines Geschäftstages bei Ihnen melden.",
+    "sendAnother": "Weitere senden",
+    "direct": "DIREKT",
+    "directText": "Lieber per E-Mail? Kontaktieren Sie uns direkt und wir leiten Sie an die richtige Person weiter."
+  },
+  "lang": "Sprache"
+}

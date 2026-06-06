@@ -17,7 +17,7 @@ export function FoundersVision() {
         className="absolute inset-0 w-full h-full object-cover opacity-55 pointer-events-none"
       />
       <div className="relative z-10 mx-auto max-w-[1240px] px-[clamp(20px,5vw,64px)] py-[clamp(72px,10vw,140px)]">
-        <Reveal><Eyebrow>Founders&apos; vision</Eyebrow></Reveal>
+        <Reveal><Eyebrow>Founders' vision</Eyebrow></Reveal>
         <Reveal delay={70}>
           <p className="font-display font-medium tracking-[-0.02em] leading-[1.18] text-on-ink text-[clamp(26px,3.4vw,42px)] max-w-[19ch] mt-6 text-pretty">
             &ldquo;We started small to build big — scalable systems, lasting partnerships, and AI that earns its place.&rdquo;

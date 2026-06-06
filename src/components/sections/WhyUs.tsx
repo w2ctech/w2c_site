@@ -3,10 +3,10 @@ import { Eyebrow } from "../ui/Typography";
 import { Card } from "../ui/Card";
 
 const POINTS = [
-  ["You&rsquo;ll feel heard", "We listen first, then choose the solution that actually fits — not the one that bills the most."],
+  ["You'll feel heard", "We listen first, then choose the solution that actually fits — not the one that bills the most."],
   ["We treat it as our own", "A sincere stake in your outcome. Your roadmap, uptime and growth become ours too."],
   ["Honest, fair pricing", "Senior expertise at reasonable rates, with flexible engagement and staffing models."],
-  ["Built to scale", "Architecture and AI decisions made for where you&rsquo;re going, not just where you are."],
+  ["Built to scale", "Architecture and AI decisions made for where you're going, not just where you are."],
 ];
 
 export function WhyUs() {

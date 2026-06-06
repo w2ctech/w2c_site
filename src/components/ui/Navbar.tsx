@@ -5,7 +5,9 @@ import { usePathname } from "next/navigation";
 import { Brand } from "./Brand";
 import { Button } from "./Button";
 import { Sun, Moon } from "./Icons";
+import { LocaleSwitcher } from "./LocaleSwitcher";
 import { useTheme } from "./useTheme";
+import { useLocale } from "@/i18n/LocaleContext";
 
 const NAV_ITEMS = [
   ["Home", "/"],
@@ -20,6 +22,8 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const [theme, toggleTheme] = useTheme();
   const pathname = usePathname();
+  const { locale, dict } = useLocale();
+  const t = dict as Record<string, Record<string, string>>;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -38,8 +42,9 @@ export function Navbar() {
   }, [open]);
 
   const isActive = (href: string) => {
-    if (href === "/") return pathname === "/";
-    return pathname.startsWith(href);
+    const cleanPath = pathname.replace(`/${locale}`, "") || "/";
+    if (href === "/") return cleanPath === "/";
+    return cleanPath.startsWith(href);
   };
 
   const linkClasses = (href: string) =>
@@ -48,6 +53,14 @@ export function Navbar() {
         ? "text-tx font-medium bg-[oklch(0.92_0.02_264/0.05)]"
         : "text-tx-2 hover:text-tx"
     }`;
+
+  const navItems: [string, string][] = [
+    [t.nav?.home || "Home", "/"],
+    [t.nav?.services || "Services", "/services"],
+    [t.nav?.about || "About", "/about"],
+    [t.nav?.careers || "Careers", "/careers"],
+    [t.nav?.contact || "Contact", "/contact"],
+  ];
 
   return (
     <header
@@ -61,14 +74,15 @@ export function Navbar() {
         <Brand />
 
         <nav className="hidden md:flex md:items-center md:gap-1">
-          {NAV_ITEMS.map(([label, href]) => (
-            <a key={href} href={href} className={linkClasses(href)}>
+          {navItems.map(([label, href]) => (
+            <a key={href} href={`/${locale}${href === "/" ? "" : href}`} className={linkClasses(href)}>
               {label}
             </a>
           ))}
         </nav>
 
         <div className="flex items-center gap-2.5">
+          <LocaleSwitcher />
           <button
             onClick={toggleTheme}
             className="w-[38px] h-[38px] rounded-[10px] shrink-0 grid place-items-center bg-transparent border border-line-2 text-tx-2 hover:text-accent-ink hover:border-accent hover:bg-card hover:-translate-y-px transition-all"
@@ -78,8 +92,8 @@ export function Navbar() {
           </button>
 
           <div className="hidden md:block">
-            <Button href="/contact" variant="accent" size="sm" arrow>
-              Get a Quote
+            <Button href={`/${locale}/contact`} variant="accent" size="sm" arrow>
+              {t.nav?.getQuote || "Get a Quote"}
             </Button>
           </div>
 
@@ -105,10 +119,10 @@ export function Navbar() {
         }`}
       >
         <div className="px-[var(--gutter)] pt-6">
-          {NAV_ITEMS.map(([label, href]) => (
+          {navItems.map(([label, href]) => (
             <a
               key={href}
-              href={href}
+              href={`/${locale}${href === "/" ? "" : href}`}
               className={`block font-display text-[30px] py-3.5 border-b border-line ${
                 isActive(href) ? "text-accent-ink" : "text-tx"
               }`}
@@ -117,8 +131,8 @@ export function Navbar() {
             </a>
           ))}
           <div className="mt-6">
-            <Button href="/contact" variant="accent" arrow>
-              Get a Quote
+            <Button href={`/${locale}/contact`} variant="accent" arrow>
+              {t.nav?.getQuote || "Get a Quote"}
             </Button>
           </div>
         </div>

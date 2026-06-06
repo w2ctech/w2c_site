@@ -1,0 +1,157 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "careers": "Careers",
+    "contact": "Contact",
+    "getQuote": "Get a Quote"
+  },
+  "hero": {
+    "eyebrow": "Web to Cloud · Software & AI",
+    "title": "Software, AI & cloud, built to scale with you.",
+    "subtitle": "A small, senior team that builds big. W2C Tech delivers custom software, intelligent AI systems and cloud — for ambitious companies across the EU, US and India. Founded 2020.",
+    "cta1": "Start a project",
+    "cta2": "Explore services"
+  },
+  "stats": [
+    ["2020", "Founded — lean by design"],
+    ["4+", "Global clients delivered"],
+    ["3", "Continents served"],
+    ["14+", "Years of founder expertise"]
+  ],
+  "partners": {
+    "heading": "Partners & clients we build for"
+  },
+  "capabilities": {
+    "eyebrow": "What we do",
+    "heading": "One partner, the whole stack.",
+    "subtitle": "We solve problems end-to-end — strategy, engineering, AI and the people to run it. No hand-offs, no gaps.",
+    "items": [
+      { "t": "Software & SaaS Solutions", "d": "Custom product engineering — SaaS platforms, web apps, internal tools and APIs, built to last and built to scale." },
+      { "t": "AI Systems & AI-Enabled Software", "d": "LLM features, ML models, intelligent automation and AI woven into the software you already run." },
+      { "t": "Cloud & DevOps", "d": "The “to Cloud” in Web to Cloud — migrations, infrastructure, CI/CD and platforms that stay up." },
+      { "t": "Staff Augmentation", "d": "Reskilled, vetted engineers and full squads on transparent per-hour billing — through our trusted vendor network." }
+    ]
+  },
+  "approach": {
+    "eyebrow": "The W2C method",
+    "heading": "From idea to production, then beyond.",
+    "subtitle": "Every engagement runs on the same belief: build scalable systems, embed AI where it earns its keep, and stay long enough to see them grow.",
+    "aiTag": "AI built into every layer — not bolted on after.",
+    "steps": [
+      ["Discover", "We learn your domain, map the problem and design an architecture that won't need rebuilding next year."],
+      ["Build", "Senior engineers ship in tight loops — software, AI models and cloud infrastructure, in production fast."],
+      ["Scale", "We harden, automate and grow the system — and the team — as your traffic and ambitions climb."]
+    ]
+  },
+  "cases": {
+    "eyebrow": "Success stories",
+    "heading": "Trusted by teams that ship.",
+    "subtitle": "From EU marketplaces to US analytics — long-term partnerships, not one-off projects."
+  },
+  "aboutTeaser": {
+    "eyebrow": "Who we are",
+    "heading": "A small team that builds big systems.",
+    "subtitle": "We're a focused, senior team — small enough to care, sharp enough to build big. We help clients use the web, cloud and AI to their full potential, with people you can count on.",
+    "mission": "To help clients harness the internet and AI through affordable, effective, custom software.",
+    "vision": "To be a global leader in scalable, intelligent software that strengthens our clients' businesses.",
+    "cta": "Meet the team"
+  },
+  "founders": {
+    "eyebrow": "Founders' vision",
+    "quote": "We started small to build big — scalable systems, lasting partnerships, and AI that earns its place."
+  },
+  "whyUs": {
+    "eyebrow": "Why choose us",
+    "heading": "The right partner, at an honest price.",
+    "subtitle": "We have the expertise to offer impartial advice and services — and we genuinely want your company to reach its potential.",
+    "points": [
+      ["You'll feel heard", "We listen first, then choose the solution that actually fits — not the one that bills the most."],
+      ["We treat it as our own", "A sincere stake in your outcome. Your roadmap, uptime and growth become ours too."],
+      ["Honest, fair pricing", "Senior expertise at reasonable rates, with flexible engagement and staffing models."],
+      ["Built to scale", "Architecture and AI decisions made for where you're going, not just where you are."]
+    ]
+  },
+  "cta": {
+    "eyebrow": "Have a project in mind?",
+    "heading": "Let's build something that scales with you.",
+    "subtitle": "Tell us where you want to go. We'll bring the engineers, the AI, and the cloud to get you there.",
+    "cta1": "Connect with us",
+    "cta2": "See services"
+  },
+  "footer": {
+    "desc": "Web to Cloud. We build scalable software, intelligent AI systems, and the teams to run them — for partners across the EU, US and India.",
+    "company": "Company",
+    "capabilities": "Capabilities",
+    "contact": "Get in touch",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "disclaimer": "Disclaimer",
+    "builtFor": "Built for scale",
+    "copyright": "W2C Tech — Web to Cloud",
+    "startProject": "Start a project",
+    "offices": "Three offices · EU · US · India"
+  },
+  "services": {
+    "kicker": "Services",
+    "title": "Everything from web to cloud — and the AI in between.",
+    "subtitle": "Six capabilities, one accountable partner. Mix and match, or hand us the whole thing. Either way, you get senior people who own the outcome.",
+    "getQuote": "Get a quote",
+    "howWeWork": "How we work",
+    "engagementEyebrow": "Engagement models",
+    "engagementHeading": "Work with us the way that fits."
+  },
+  "about": {
+    "kicker": "About W2C Tech",
+    "title": "A software team that grows businesses, not just code.",
+    "subtitle": "A small, senior team that builds big. Since 2020 we have delivered software, AI and cloud systems for partners across the EU, US and India.",
+    "storyEyebrow": "Our story",
+    "storyHeading": "From Web to Cloud — and now to AI.",
+    "story1": "W2C — Web to Cloud — started with a simple idea: help businesses use the internet to its full potential. Since 2020, that mission has grown to run through cloud and AI too.",
+    "story2": "Today we ship software, intelligent AI systems and the cloud platforms that run them — and when teams need more hands, we provide vetted engineers through our trusted vendor network.",
+    "leadershipEyebrow": "Leadership",
+    "leadershipHeading": "The people who keep us pointed forward.",
+    "valuesEyebrow": "What we value",
+    "valuesHeading": "How we show up, every project.",
+    "valuesTag": "Trusted vendor tie-ups for staffing at any scale.",
+    "mission": "Empower clients to win online.",
+    "missionText": "To help our clients use the internet and AI to their full potential — through affordable, effective, custom design, software and marketing solutions.",
+    "vision": "A global leader in scalable software.",
+    "visionText": "To become a global leader in unique, intelligent web and cloud solutions that improve our clients productivity and business strength."
+  },
+  "careers": {
+    "kicker": "Careers",
+    "title": "Build software that matters — with people who have got your back.",
+    "subtitle": "We are a small, senior team shipping for clients worldwide. If you like ownership, scale and a bit of AI, you will feel at home.",
+    "seeRoles": "See open roles",
+    "aboutTeam": "About the team",
+    "perksEyebrow": "Why join W2C",
+    "perksHeading": "Senior work, human pace.",
+    "rolesEyebrow": "Open roles",
+    "rolesHeading": "Find your seat.",
+    "rolesNote": "Don't see your exact role? We are always talking to good engineers — send us a note anyway.",
+    "apply": "Apply for this role"
+  },
+  "contact": {
+    "kicker": "Contact",
+    "title": "Let's talk about what we can build together.",
+    "subtitle": "Tell us where you want to go. We will bring the engineers, the AI and the cloud to help you get there — usually with a reply inside one business day.",
+    "formTitle": "Start the conversation",
+    "name": "Your name",
+    "email": "Work email",
+    "company": "Company",
+    "companyOptional": "optional",
+    "service": "What do you need?",
+    "selectService": "Select a service…",
+    "projectDetails": "Project details",
+    "projectPlaceholder": "A few lines on what you are building and where you would like help…",
+    "send": "Send message",
+    "thanks": "Thanks — message received.",
+    "thanksText": "We will review your note and get back to you within one business day.",
+    "sendAnother": "Send another",
+    "direct": "DIRECT",
+    "directText": "Prefer email? Reach us directly and we will route you to the right person."
+  },
+  "lang": "Language"
+}

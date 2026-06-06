@@ -1,0 +1,157 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "about": "À propos",
+    "careers": "Carrières",
+    "contact": "Contact",
+    "getQuote": "Obtenir un devis"
+  },
+  "hero": {
+    "eyebrow": "Web to Cloud · Logiciel & IA",
+    "title": "Logiciel, IA & cloud, conçus pour évoluer avec vous.",
+    "subtitle": "Une petite équipe senior qui voit grand. W2C Tech fournit des logiciels sur mesure, des systèmes d'IA intelligents et du cloud — pour des entreprises ambitieuses en Europe, aux États-Unis et en Inde. Fondée en 2020.",
+    "cta1": "Démarrer un projet",
+    "cta2": "Explorer les services"
+  },
+  "stats": [
+    ["2020", "Fondée — lean par conception"],
+    ["4+", "Clients internationaux livrés"],
+    ["3", "Continents desservis"],
+    ["14+", "Années d'expertise des fondateurs"]
+  ],
+  "partners": {
+    "heading": "Partenaires & clients pour lesquels nous construisons"
+  },
+  "capabilities": {
+    "eyebrow": "Ce que nous faisons",
+    "heading": "Un partenaire, toute la stack.",
+    "subtitle": "Nous résolvons les problèmes de bout en bout — stratégie, ingénierie, IA et les personnes pour les exécuter. Pas de transferts, pas de lacunes.",
+    "items": [
+      { "t": "Solutions logicielles & SaaS", "d": "Ingénierie produit sur mesure — plateformes SaaS, applications web, outils internes et API, conçus pour durer et évoluer." },
+      { "t": "Systèmes d'IA & logiciels augmentés par l'IA", "d": "Fonctionnalités LLM, modèles ML, automatisation intelligente et IA intégrée dans vos logiciels existants." },
+      { "t": "Cloud & DevOps", "d": "Le « to Cloud » de Web to Cloud — migrations, infrastructure, CI/CD et plateformes qui restent opérationnelles." },
+      { "t": "Renfort d'équipe", "d": "Ingénieurs qualifiés et vérifiés, et équipes complètes en facturation horaire transparente — via notre réseau de partenaires de confiance." }
+    ]
+  },
+  "approach": {
+    "eyebrow": "La méthode W2C",
+    "heading": "De l'idée à la production, et au-delà.",
+    "subtitle": "Chaque engagement repose sur la même conviction : construire des systèmes évolutifs, intégrer l'IA là où elle a sa place, et rester assez longtemps pour les voir grandir.",
+    "aiTag": "IA intégrée à chaque couche — pas ajoutée après coup.",
+    "steps": [
+      ["Découvrir", "Nous apprenons votre domaine, cartographions le problème et concevons une architecture qui n'aura pas besoin d'être reconstruite l'année prochaine."],
+      ["Construire", "Des ingénieurs seniors livrent en boucles courtes — logiciel, modèles d'IA et infrastructure cloud, en production rapidement."],
+      ["Évoluer", "Nous renforçons, automatisons et développons le système — et l'équipe — à mesure que votre trafic et vos ambitions augmentent."]
+    ]
+  },
+  "cases": {
+    "eyebrow": "Histoires de réussite",
+    "heading": "La confiance des équipes qui livrent.",
+    "subtitle": "Des marketplaces européennes aux analytics américains — des partenariats à long terme, pas des projets ponctuels."
+  },
+  "aboutTeaser": {
+    "eyebrow": "Qui nous sommes",
+    "heading": "Une petite équipe qui construit de grands systèmes.",
+    "subtitle": "Nous sommes une équipe concentrée et senior — assez petite pour se soucier, assez pointue pour construire grand. Nous aidons les clients à utiliser le web, le cloud et l'IA à leur plein potentiel.",
+    "mission": "Aider les clients à exploiter Internet et l'IA grâce à des logiciels personnalisés abordables et efficaces.",
+    "vision": "Devenir un leader mondial des logiciels intelligents et évolutifs qui renforcent les entreprises de nos clients.",
+    "cta": "Rencontrer l'équipe"
+  },
+  "founders": {
+    "eyebrow": "Vision des fondateurs",
+    "quote": "Nous avons commencé petit pour construire grand — des systèmes évolutifs, des partenariats durables et une IA qui mérite sa place."
+  },
+  "whyUs": {
+    "eyebrow": "Pourquoi nous choisir",
+    "heading": "Le bon partenaire, à un prix honnête.",
+    "subtitle": "Nous avons l'expertise pour offrir des conseils et services impartiaux — et nous voulons vraiment que votre entreprise atteigne son potentiel.",
+    "points": [
+      ["Vous serez entendu", "Nous écoutons d'abord, puis choisissons la solution qui convient vraiment — pas celle qui facture le plus."],
+      ["Nous le traitons comme le nôtre", "Un intérêt sincère pour votre résultat. Votre feuille de route, disponibilité et croissance deviennent aussi les nôtres."],
+      ["Des prix honnêtes et justes", "Expertise senior à des tarifs raisonnables, avec des modèles d'engagement et de staffing flexibles."],
+      ["Conçu pour évoluer", "Des décisions d'architecture et d'IA prises pour là où vous allez, pas seulement là où vous êtes."]
+    ]
+  },
+  "cta": {
+    "eyebrow": "Un projet en tête ?",
+    "heading": "Construisons quelque chose qui évolue avec vous.",
+    "subtitle": "Dites-nous où vous voulez aller. Nous apportons les ingénieurs, l'IA et le cloud pour vous y emmener.",
+    "cta1": "Nous contacter",
+    "cta2": "Voir les services"
+  },
+  "footer": {
+    "desc": "Web to Cloud. Nous construisons des logiciels évolutifs, des systèmes d'IA intelligents et les équipes pour les exécuter — pour des partenaires en Europe, aux États-Unis et en Inde.",
+    "company": "Entreprise",
+    "capabilities": "Capacités",
+    "contact": "Contact",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "disclaimer": "Avertissement",
+    "builtFor": "Conçu pour évoluer",
+    "copyright": "W2C Tech — Web to Cloud",
+    "startProject": "Démarrer un projet",
+    "offices": "Trois bureaux · EU · US · Inde"
+  },
+  "services": {
+    "kicker": "Services",
+    "title": "Tout du web au cloud — et l'IA entre les deux.",
+    "subtitle": "Six capacités, un partenaire responsable. Mélangez, ou confiez-nous le tout. Dans tous les cas, vous obtenez des personnes seniors qui assument le résultat.",
+    "getQuote": "Obtenir un devis",
+    "howWeWork": "Comment nous travaillons",
+    "engagementEyebrow": "Modèles d'engagement",
+    "engagementHeading": "Travaillez avec nous comme cela vous convient."
+  },
+  "about": {
+    "kicker": "À propos de W2C Tech",
+    "title": "Une équipe logicielle qui fait grandir les entreprises, pas seulement le code.",
+    "subtitle": "Une petite équipe senior qui voit grand. Depuis 2020, nous livrons des logiciels, de l'IA et des systèmes cloud pour des partenaires en Europe, aux États-Unis et en Inde.",
+    "storyEyebrow": "Notre histoire",
+    "storyHeading": "Du Web au Cloud — et maintenant à l'IA.",
+    "story1": "W2C — Web to Cloud — a commencé avec une idée simple : aider les entreprises à utiliser Internet à son plein potentiel. Depuis 2020, cette mission s'est étendue au cloud et à l'IA.",
+    "story2": "Aujourd'hui, nous livrons des logiciels, des systèmes d'IA intelligents et les plateformes cloud qui les exécutent — et quand les équipes ont besoin de renfort, nous fournissons des ingénieurs vérifiés via notre réseau de partenaires de confiance.",
+    "leadershipEyebrow": "Direction",
+    "leadershipHeading": "Les personnes qui nous font avancer.",
+    "valuesEyebrow": "Nos valeurs",
+    "valuesHeading": "Comment nous nous présentons, à chaque projet.",
+    "valuesTag": "Partenariats de confiance pour le staffing à toute échelle.",
+    "mission": "Permettre aux clients de gagner en ligne.",
+    "missionText": "Aider nos clients à utiliser Internet et l'IA à leur plein potentiel — grâce à des solutions de conception, de logiciel et de marketing personnalisées, abordables et efficaces.",
+    "vision": "Un leader mondial des logiciels évolutifs.",
+    "visionText": "Devenir un leader mondial des solutions web et cloud uniques et intelligentes qui améliorent la productivité et la force commerciale de nos clients."
+  },
+  "careers": {
+    "kicker": "Carrières",
+    "title": "Construisez des logiciels qui comptent — avec des personnes qui vous soutiennent.",
+    "subtitle": "Nous sommes une petite équipe senior qui livre pour des clients du monde entier. Si vous aimez l'autonomie, l'échelle et un peu d'IA, vous vous sentirez chez vous.",
+    "seeRoles": "Voir les postes ouverts",
+    "aboutTeam": "À propos de l'équipe",
+    "perksEyebrow": "Pourquoi rejoindre W2C",
+    "perksHeading": "Travail senior, rythme humain.",
+    "rolesEyebrow": "Postes ouverts",
+    "rolesHeading": "Trouvez votre place.",
+    "rolesNote": "Votre poste exact n'est pas listé ? Nous parlons toujours avec de bons ingénieurs — envoyez-nous un message.",
+    "apply": "Postuler pour ce poste"
+  },
+  "contact": {
+    "kicker": "Contact",
+    "title": "Parlons de ce que nous pouvons construire ensemble.",
+    "subtitle": "Dites-nous où vous voulez aller. Nous apportons les ingénieurs, l'IA et le cloud pour vous aider à y arriver — généralement avec une réponse sous un jour ouvré.",
+    "formTitle": "Commencer la conversation",
+    "name": "Votre nom",
+    "email": "Email professionnel",
+    "company": "Entreprise",
+    "companyOptional": "optionnel",
+    "service": "De quoi avez-vous besoin ?",
+    "selectService": "Sélectionner un service…",
+    "projectDetails": "Détails du projet",
+    "projectPlaceholder": "Quelques lignes sur ce que vous construisez et où vous aimeriez de l'aide…",
+    "send": "Envoyer le message",
+    "thanks": "Merci — message reçu.",
+    "thanksText": "Nous examinerons votre message et vous répondrons dans un jour ouvré.",
+    "sendAnother": "Envoyer un autre",
+    "direct": "DIRECT",
+    "directText": "Vous préférez l'email ? Contactez-nous directement et nous vous orienterons vers la bonne personne."
+  },
+  "lang": "Langue"
+}
