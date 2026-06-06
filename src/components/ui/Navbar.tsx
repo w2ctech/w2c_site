@@ -9,14 +9,6 @@ import { LocaleSwitcher } from "./LocaleSwitcher";
 import { useTheme } from "./useTheme";
 import { useLocale } from "@/i18n/LocaleContext";
 
-const NAV_ITEMS = [
-  ["Home", "/"],
-  ["Services", "/services"],
-  ["About", "/about"],
-  ["Careers", "/careers"],
-  ["Contact", "/contact"],
-];
-
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -31,10 +23,6 @@ export function Navbar() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -75,7 +63,7 @@ export function Navbar() {
 
         <nav className="hidden md:flex md:items-center md:gap-1">
           {navItems.map(([label, href]) => (
-            <a key={href} href={`/${locale}${href === "/" ? "" : href}`} className={linkClasses(href)}>
+            <a key={href} href={`/${locale}${href === "/" ? "" : href}`} className={linkClasses(href)} onClick={() => setOpen(false)}>
               {label}
             </a>
           ))}
@@ -123,6 +111,7 @@ export function Navbar() {
             <a
               key={href}
               href={`/${locale}${href === "/" ? "" : href}`}
+              onClick={() => setOpen(false)}
               className={`block font-display text-[30px] py-3.5 border-b border-line ${
                 isActive(href) ? "text-accent-ink" : "text-tx"
               }`}

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Eyebrow } from "./Typography";
 import { Reveal } from "./Reveal";
 import { Arrow } from "./Icons";
@@ -47,19 +48,19 @@ export function CTASection({ variant = "ink" }: { variant?: "ink" | "default" })
             <Reveal><Eyebrow>Have a project in mind?</Eyebrow></Reveal>
             <Reveal delay={60}>
               <h2 className="font-display font-semibold text-tx mt-5 max-w-[620px] text-[clamp(34px,5vw,58px)]">
-                Let's build something that scales with you.
+                Let&apos;s build something that scales with you.
               </h2>
             </Reveal>
             <Reveal delay={120}>
               <p className="text-[clamp(18px,2vw,22px)] text-tx-2 leading-relaxed mt-[18px] max-w-[520px]">
-                Tell us where you want to go. We'll bring the engineers, the AI, and the cloud to get you there.
+                Tell us where you want to go. We&apos;ll bring the engineers, the AI, and the cloud to get you there.
               </p>
             </Reveal>
           </div>
           <Reveal delay={160}>
             <div className="flex gap-3 flex-wrap">
               <a href="https://calendly.com/w2ctechsolution/consultation" target="_blank" rel="noopener noreferrer" className="btn-accent">Connect with us <Arrow /></a>
-              <a href="/services" className="btn-ghost">See services</a>
+              <Link href="/services" className="btn-ghost">See services</Link>
             </div>
           </Reveal>
         </div>

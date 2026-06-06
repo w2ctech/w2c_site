@@ -1,9 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
-import { Reveal } from "./Reveal";
-
-const _store = new Map<string, { value: string; setter: (v: string) => void }>();
+import { useEffect, useState } from "react";
 
 export function useTheme(): ["dark" | "light", () => void] {
   const [theme, setTheme] = useState<"dark" | "light">(() => {
