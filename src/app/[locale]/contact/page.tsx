@@ -20,6 +20,7 @@ export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", company: "", service: "", message: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
 
   const set = (k: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setForm({ ...form, [k]: e.target.value });
@@ -30,13 +31,30 @@ export default function ContactPage() {
     if (!form.email.trim()) er.email = "Please enter your email";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) er.email = "That email looks off";
     if (!form.message.trim()) er.message = "Tell us a little about your project";
+    else if (form.message.trim().length < 50) er.message = "Please share a bit more detail (at least 50 characters)";
     setErrors(er);
     return Object.keys(er).length === 0;
   };
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (validate()) setSent(true);
+    if (!validate()) return;
+    setSending(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setSent(true);
+      } else {
+        setErrors({ form: "Failed to send. Please try again or email us directly." });
+      }
+    } catch {
+      setErrors({ form: "Network error. Please try again or email us directly." });
+    }
+    setSending(false);
   };
 
   return (
@@ -62,8 +80,8 @@ export default function ContactPage() {
                         {errors.name && <small className="text-accent-ink block mt-1.5">{errors.name}</small>}
                       </div>
                       <div>
-                        <label className="field-label">Work email</label>
-                        <input className="input-field" value={form.email} onChange={set("email")} placeholder="jane@company.com" />
+                        <label className="field-label">Email</label>
+                        <input className="input-field" value={form.email} onChange={set("email")} placeholder="jane@example.com" />
                         {errors.email && <small className="text-accent-ink block mt-1.5">{errors.email}</small>}
                       </div>
                     </div>
@@ -81,11 +99,20 @@ export default function ContactPage() {
                     <div className="mt-[18px]">
                       <label className="field-label">Project details</label>
                       <textarea className="input-field" rows={5} value={form.message} onChange={set("message")} placeholder="A few lines on what you are building and where you would like help..." style={{ resize: "vertical" }} />
-                      {errors.message && <small className="text-accent-ink block mt-1.5">{errors.message}</small>}
+                      <div className="flex justify-between mt-1.5">
+                        {errors.message ? (
+                          <small className="text-accent-ink">{errors.message}</small>
+                        ) : (
+                          <small className={`font-mono text-xs ${form.message.trim().length >= 50 ? "text-green-400" : "text-tx-3"}`}>
+                            {form.message.trim().length >= 50 ? "✓ " : ""}{form.message.trim().length}/50 characters minimum
+                          </small>
+                        )}
+                      </div>
                     </div>
-                    <button type="submit" className="btn-accent w-full justify-center mt-6">
-                      Send message <Arrow />
+                    <button type="submit" className="btn-accent w-full justify-center mt-6" disabled={sending}>
+                      {sending ? "Sending..." : "Send message"} {!sending && <Arrow />}
                     </button>
+                    {errors.form && <small className="text-red-400 block mt-3 text-center">{errors.form}</small>}
                   </form>
                 ) : (
                   <div className="text-center py-10 px-3">
