@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Brand } from "./Brand";
 import { Button } from "./Button";
+import { Arrow } from "./Icons";
 
 const FOOTER_LINKS = {
   company: [
@@ -88,9 +89,9 @@ export function Footer() {
                 GSTIN: 09AADCW3276E1Z7
               </li>
               <li className="mt-1.5">
-                <Button href="/contact" variant="light" size="sm" arrow>
-                  Start a project
-                </Button>
+                <a href="https://calendly.com/w2ctechsolution/consultation" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm rounded-full border border-transparent bg-[oklch(0.96_0.006_90)] text-[oklch(0.17_0.012_75)] font-medium inline-flex items-center gap-2.5 transition-all hover:-translate-y-0.5 hover:shadow-lg">
+                  Start a project <Arrow />
+                </a>
               </li>
             </ul>
           </div>

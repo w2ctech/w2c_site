@@ -76,7 +76,7 @@ export function Hero() {
             </Reveal>
             <Reveal delay={210}>
               <div className="flex items-center gap-3.5 flex-wrap mt-8">
-                <Button href="/contact" variant="accent" arrow>
+                <Button href="https://calendly.com/w2ctechsolution/consultation" variant="accent" arrow>
                   Start a project
                 </Button>
                 <Button href="/services" variant="ghost">

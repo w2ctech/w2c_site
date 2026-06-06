@@ -1,3 +1,5 @@
+"use client";
+
 import { Reveal } from "@/components/ui/Reveal";
 import { Eyebrow, Tag } from "@/components/ui/Typography";
 import { Button } from "@/components/ui/Button";
@@ -77,7 +79,7 @@ export default function ServicesPage() {
       >
         <Reveal delay={200}>
           <div className="flex items-center gap-3.5 flex-wrap mt-[30px]">
-            <Button href={`/${locale}/contact`} variant="accent" arrow>{dict.services?.getQuote || "Get a quote"}</Button>
+            <Button href="https://calendly.com/w2ctechsolution/consultation" variant="accent" arrow>{dict.services?.getQuote || "Get a quote"}</Button>
             <Button href={`/${locale}/about`} variant="ghost">{dict.services?.howWeWork || "How we work"}</Button>
           </div>
         </Reveal>

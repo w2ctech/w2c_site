@@ -92,7 +92,7 @@ export function Navbar() {
           </button>
 
           <div className="hidden md:block">
-            <Button href={`/${locale}/contact`} variant="accent" size="sm" arrow>
+            <Button href="https://calendly.com/w2ctechsolution/consultation" variant="accent" size="sm" arrow>
               {t.nav?.getQuote || "Get a Quote"}
             </Button>
           </div>
@@ -131,7 +131,7 @@ export function Navbar() {
             </a>
           ))}
           <div className="mt-6">
-            <Button href={`/${locale}/contact`} variant="accent" arrow>
+            <Button href="https://calendly.com/w2ctechsolution/consultation" variant="accent" arrow>
               {t.nav?.getQuote || "Get a Quote"}
             </Button>
           </div>

@@ -1,8 +1,8 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
-import { useLocale } from "./LocaleContext";
-import { locales, localeLabels, type Locale } from "./config";
+import { useLocale } from "@/i18n/LocaleContext";
+import { locales, localeLabels, type Locale } from "@/i18n/config";
 import { useState, useRef, useEffect } from "react";
 
 export function LocaleSwitcher() {

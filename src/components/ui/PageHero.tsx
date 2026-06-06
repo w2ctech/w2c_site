@@ -58,7 +58,7 @@ export function CTASection({ variant = "ink" }: { variant?: "ink" | "default" })
           </div>
           <Reveal delay={160}>
             <div className="flex gap-3 flex-wrap">
-              <a href="/contact" className="btn-accent">Connect with us <Arrow /></a>
+              <a href="https://calendly.com/w2ctechsolution/consultation" target="_blank" rel="noopener noreferrer" className="btn-accent">Connect with us <Arrow /></a>
               <a href="/services" className="btn-ghost">See services</a>
             </div>
           </Reveal>

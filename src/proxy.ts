@@ -13,7 +13,7 @@ function getLocale(request: NextRequest): string {
   return defaultLocale;
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const pathLocale = locales.find((l) => pathname.startsWith(`/${l}/`) || pathname === `/${l}`);
 
@@ -39,7 +39,3 @@ export function middleware(request: NextRequest) {
   response.cookies.set("w2c-locale", locale, { maxAge: 31536000, path: "/" });
   return response;
 }
-
-export const config = {
-  matcher: ["/((?!_next|api|assets|favicon\\.svg|icon\\.svg|og-image\\.svg).*)"],
-};
