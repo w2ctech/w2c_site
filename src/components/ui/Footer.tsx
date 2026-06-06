@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Brand } from "./Brand";
 import { Button } from "./Button";
 import { Arrow } from "./Icons";
+import { version } from "@/../package.json";
 
 const FOOTER_LINKS = {
   company: [
@@ -105,12 +106,12 @@ export function Footer() {
         <hr className="my-11 border-t border-[oklch(1_0_0/0.1)]" />
 
         <div className="flex flex-wrap justify-between gap-3 font-mono text-[13px] text-on-ink-2">
-          <span>&copy; {new Date().getFullYear()} W2C Tech — Web to Cloud</span>
+          <span>&copy; {new Date().getFullYear()} W2C Tech Solution Private Limited</span>
           <span className="flex gap-3">
             <Link href="/privacy-policy" className="hover:text-on-ink transition-colors">Privacy</Link>
             <Link href="/terms-of-service" className="hover:text-on-ink transition-colors">Terms</Link>
             <Link href="/disclaimer" className="hover:text-on-ink transition-colors">Disclaimer</Link>
-            <span>Built for scale</span>
+            <span>v{version}</span>
           </span>
         </div>
       </div>

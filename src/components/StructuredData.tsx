@@ -3,6 +3,7 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "W2C Tech",
+    legalName: "W2C Tech Solution Private Limited",
     alternateName: "Web to Cloud",
     url: "https://w2ctech.com",
     logo: "https://w2ctech.com/assets/w2c-logo.png",
