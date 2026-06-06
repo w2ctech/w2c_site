@@ -1,11 +1,10 @@
-import type { Locale } from "./config";
+import { defaultLocale, type Locale } from "./config";
+import en from "./dictionaries/en.json";
+import de from "./dictionaries/de.json";
+import fr from "./dictionaries/fr.json";
 
-const dictionaries = {
-  en: () => import("./dictionaries/en.json").then((m) => m.default),
-  de: () => import("./dictionaries/de.json").then((m) => m.default),
-  fr: () => import("./dictionaries/fr.json").then((m) => m.default),
-};
+const dicts = { en, de, fr } as const;
 
-export async function getDictionary(locale: Locale) {
-  return dictionaries[locale]();
+export function getDictionary(locale: Locale) {
+  return dicts[locale] ?? dicts[defaultLocale];
 }

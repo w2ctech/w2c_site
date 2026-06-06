@@ -7,15 +7,14 @@ import { Card } from "@/components/ui/Card";
 import { Arrow, Spark } from "@/components/ui/Icons";
 import { PageHero, CTASection } from "@/components/ui/PageHero";
 import { useDict, useLocale } from "@/i18n/LocaleContext";
-import type { Metadata } from "next";
 
 const SERVICES = [
-  { n: "01", tag: "Build", t: "Software & SaaS Solutions", d: "Custom product engineering, end to end. We design and build SaaS platforms, web apps, internal tools and APIs that are clean to maintain and ready to grow.", points: ["SaaS product engineering", "APIs & system integration", "Internal tools & dashboards", "Mobile & cross-platform apps"], ai: false },
-  { n: "02", tag: "AI", ai: true, t: "AI Systems & AI-Enabled Software", d: "AI where it earns its keep. We build LLM-powered features, ML models and intelligent automation — and retrofit AI into the software you already run.", points: ["LLM & RAG applications", "ML models & data products", "AI copilots & agents", "AI strategy & consulting"] },
-  { n: "03", tag: "Cloud", t: "Cloud & DevOps", d: "The to Cloud in Web to Cloud. Migrations, cloud-native architecture, CI/CD and reliability engineering that keeps your systems fast and always on.", points: ["Cloud migration & architecture", "CI/CD & automation", "Infrastructure as code", "Monitoring & SRE"], ai: false },
-  { n: "04", tag: "Search", ai: true, t: "Search & Data Engineering", d: "Findability at scale. Lucene, Elasticsearch and modern vector search — combined with AI to deliver relevance your users actually feel.", points: ["Lucene / Elasticsearch", "Vector & semantic search", "Data pipelines & ETL", "Analytics & reporting"] },
-  { n: "05", tag: "Teams", t: "Staff Augmentation", d: "The right people, fast — on transparent per-hour billing. Vetted, continuously reskilled engineers and full squads that embed in your team, backed by our trusted vendor network.", points: ["Per-hour, scale-as-you-go billing", "Reskilled, vetted engineers", "Dedicated squads or individuals", "Trusted vendor network"], ai: false },
-  { n: "06", tag: "Advise", t: "IT Consulting & Distribution", d: "Direction before delivery. Architecture reviews, technology strategy and software distribution to get the right systems into the right hands.", points: ["Technology strategy", "Architecture & audits", "Software distribution", "Digital transformation"], ai: false },
+  { n: "01", tag: "Build", t: "Software & SaaS Solutions", d: "Custom product engineering, end to end. We design and build SaaS platforms, web apps, internal tools and APIs that are clean to maintain and ready to grow.", points: ["SaaS product engineering", "APIs & system integration", "Internal tools & dashboards", "Mobile & cross-platform apps"], ai: false, img: "/assets/Software_&_SaaS_Solutions.png" },
+  { n: "02", tag: "AI", ai: true, t: "AI Systems & AI-Enabled Software", d: "AI where it earns its keep. We build LLM-powered features, ML models and intelligent automation — and retrofit AI into the software you already run.", points: ["LLM & RAG applications", "ML models & data products", "AI copilots & agents", "AI strategy & consulting"], img: "/assets/AI_Systems_&_AI-Enabled_Software.png" },
+  { n: "03", tag: "Cloud", t: "Cloud & DevOps", d: "The to Cloud in Web to Cloud. Migrations, cloud-native architecture, CI/CD and reliability engineering that keeps your systems fast and always on.", points: ["Cloud migration & architecture", "CI/CD & automation", "Infrastructure as code", "Monitoring & SRE"], ai: false, img: "/assets/Cloud_&_DevOps.png" },
+  { n: "04", tag: "Search", ai: true, t: "Search & Data Engineering", d: "Findability at scale. Lucene, Elasticsearch and modern vector search — combined with AI to deliver relevance your users actually feel.", points: ["Lucene / Elasticsearch", "Vector & semantic search", "Data pipelines & ETL", "Analytics & reporting"], img: "/assets/Search_&_Data_Engineering.png" },
+  { n: "05", tag: "Teams", t: "Staff Augmentation", d: "The right people, fast — on transparent per-hour billing. Vetted, continuously reskilled engineers and full squads that embed in your team, backed by our trusted vendor network.", points: ["Per-hour, scale-as-you-go billing", "Reskilled, vetted engineers", "Dedicated squads or individuals", "Trusted vendor network"], ai: false, img: "/assets/Staff_Augmentation.png" },
+  { n: "06", tag: "Advise", t: "IT Consulting & Distribution", d: "Direction before delivery. Architecture reviews, technology strategy and software distribution to get the right systems into the right hands.", points: ["Technology strategy", "Architecture & audits", "Software distribution", "Digital transformation"], ai: false, img: "/assets/IT_Consulting_&_Distribution.png" },
 ];
 
 const MODELS = [
@@ -24,18 +23,23 @@ const MODELS = [
   ["Fixed Project", "Defined scope, timeline and price — best when requirements are clear and outcomes are concrete.", "Per project"],
 ];
 
-function Placeholder({ label, ink = false }: { label: string; ink?: boolean }) {
+function ServiceImage({ img, ai, lessCrop = false }: { img: string; ai: boolean; lessCrop?: boolean }) {
   return (
-    <div className={`relative border border-line rounded-[var(--radius-card)] flex items-center justify-center overflow-hidden aspect-square w-full ${ink ? "bg-ink" : "bg-card-solid"} bg-[repeating-linear-gradient(-45deg,oklch(0.92_0.02_264/0.05)_0_1px,transparent_1px_11px)]`}>
-      <span className={`font-mono text-xs tracking-[0.04em] py-1.5 px-3 rounded-full border border-line-2 ${ink ? "bg-ink-soft text-on-ink-2" : "bg-[oklch(0.16_0.018_264/0.7)] text-tx-2"}`}>
-        {label}
-      </span>
+    <div className={`relative aspect-square w-full rounded-[var(--radius-card)] overflow-hidden border border-line ${ai ? "bg-ink" : "bg-card-solid"}`}>
+      <img
+        src={img}
+        alt=""
+        aria-hidden="true"
+        className={`absolute inset-0 w-full h-full object-cover ${lessCrop ? "scale-[1.01]" : "scale-[1.03]"}`}
+        style={{ objectPosition: lessCrop ? "center 49.8%" : "center 49.3%" }}
+      />
     </div>
   );
 }
 
 function ServiceBlock({ s, i }: { s: typeof SERVICES[0]; i: number }) {
   const flip = i % 2 === 1;
+  const needsLessCrop = s.n === "03" || s.n === "04";
   return (
     <Reveal>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-[clamp(28px,5vw,72px)] items-center">
@@ -59,7 +63,7 @@ function ServiceBlock({ s, i }: { s: typeof SERVICES[0]; i: number }) {
           </ul>
         </div>
         <div style={{ order: flip ? 1 : 2 }}>
-          <Placeholder label={s.t.toLowerCase()} ink={s.ai} />
+          <ServiceImage img={s.img} ai={s.ai} lessCrop={needsLessCrop} />
         </div>
       </div>
     </Reveal>

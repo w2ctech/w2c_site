@@ -2,7 +2,7 @@ import { Reveal } from "../ui/Reveal";
 import { Eyebrow } from "../ui/Typography";
 
 const FOUNDERS = [
-  { name: "Yogendra Singh", role: "Director · 14+ yrs IT", img: "/assets/yogendra.jpeg" },
+  { name: "Yogendra Singh", role: "Director · Software Eng & AI", img: "/assets/yogendra.jpeg" },
   { name: "Bishwajeet Biswas", role: "Director · Cloud", img: "/assets/bishwajeet.png" },
   { name: "Ekta Singh", role: "Senior HR Specialist", img: "/assets/ekta.jpeg" },
 ];

@@ -1,3 +1,5 @@
+import Script from "next/script";
+
 export default function StructuredData() {
   const jsonLd = [
     {
@@ -24,7 +26,7 @@ export default function StructuredData() {
       slogan:
         "Software, AI & cloud, built to scale with you.",
       keywords:
-        "custom software development, software consulting company, software consultancy, software engineering firm, enterprise SaaS solutions, SaaS development, SaaS platform development, web application development, web app development, mobile app development, cross-platform app development, API development, API integration, full-stack development, frontend development, backend development, microservices architecture, serverless architecture, MVP development, startup software consulting, product engineering, custom product engineering, internal tools development, dashboard development, legacy system modernization, technical debt reduction, code review services, software architecture consulting, software architecture design, AI integration services, AI consulting, AI development company, artificial intelligence services, AI-enabled software, AI copilot development, AI agent development, chatbot development, LLM development, large language model integration, RAG application development, retrieval augmented generation, ML model development, machine learning consulting, machine learning services, deep learning, natural language processing, NLP, computer vision, AI strategy consulting, enterprise AI transformation, intelligent automation, AI automation, AI retrofitting, cloud architecture consulting, cloud consulting services, cloud migration services, cloud-native development, cloud infrastructure, cloud automation, DevOps consulting, DevOps services, DevOps as a service, CI/CD pipeline, continuous integration, continuous deployment, infrastructure as code, IaC, site reliability engineering, SRE consulting, cloud monitoring, observability, AWS consulting, GCP consulting, Google Cloud consulting, cloud cost optimization, managed cloud services, Docker, Kubernetes, container orchestration, search engineering, Elasticsearch consulting, Lucene development, vector search, semantic search, full-text search, relevance tuning, data engineering, data pipeline development, ETL development, data analytics, business intelligence, analytics and reporting, big data consulting, staff augmentation, IT staff augmentation, IT staffing services, dedicated development team, dedicated engineering squad, offshore software development, offshore development team, remote development team, freelance software developers, contract software engineers, vetted engineers, reskilled engineers, bench sales, vendor network, IT outsourcing, IT consulting, technology consulting, digital transformation consulting, technology strategy, architecture audit, software distribution, software reseller, IT procurement, technology advisory, IT solutions, digital agency, web design, web development, UI/UX design, responsive design, website development, website maintenance, digital marketing, SEO services, e-commerce development, marketplace platform development, fintech software, crypto analytics, retail software, sports commerce platform, luxury resale platform, sustainable commerce, B2B software, B2C software, SaaS product, enterprise software, custom web solutions, cloud solutions, software solutions, IT services, technology partner, software partner, web to cloud, w2c tech, w2ctech",
+        "custom software development, software consulting company, software consultancy, software engineering firm, enterprise SaaS solutions, SaaS development, SaaS platform development, web application development, web app development, mobile app development, cross-platform app development, API development, API integration, full-stack development, frontend development, backend development, microservices architecture, serverless architecture, MVP development, startup software consulting, product engineering, custom product engineering, internal tools development, dashboard development, legacy system modernization, technical debt reduction, code review services, software architecture consulting, software architecture design, AI integration services, AI consulting, AI development company, artificial intelligence services, AI-enabled software, AI copilot development, AI agent development, chatbot development, LLM development, large language model integration, RAG application development, retrieval augmented generation, ML model development, machine learning consulting, machine learning services, deep learning, natural language processing, NLP, computer vision, AI strategy consulting, enterprise AI transformation, intelligent automation, AI automation, AI retrofitting, cloud architecture consulting, cloud consulting services, cloud migration services, cloud-native development, cloud infrastructure, cloud automation, DevOps consulting, DevOps services, DevOps as a service, CI/CD pipeline, continuous integration, continuous deployment, infrastructure as code, IaC, site reliability engineering, SRE consulting, cloud monitoring, observability, AWS consulting, GCP consulting, Google Cloud consulting, cloud cost optimization, managed cloud services, Docker, Kubernetes, container orchestration, search engineering, Elasticsearch consulting, Lucene development, vector search, semantic search, full-text search, relevance tuning, data engineering, data pipeline development, ETL development, data analytics, business intelligence, analytics and reporting, big data consulting, staff augmentation, IT staff augmentation, IT staffing services, dedicated development team, dedicated engineering squad, offshore software development, offshore development team, remote development team, freelance software developers, contract software engineers, vetted engineers, reskilled engineers, bench sales, vendor network, IT outsourcing, IT consulting, technology consulting, digital transformation consulting, technology strategy, architecture audit, software distribution, software reseller, IT procurement, technology advisory, IT solutions, digital agency, web design, web development, UI/UX design, responsive design, website development, website maintenance, digital marketing, SEO services, e-commerce development, marketplace platform development, fintech software, crypto analytics, retail software, sports commerce platform, luxury resale platform, sustainable commerce, B2B software, B2C software, SaaS product, enterprise software, custom web solutions, cloud solutions, software solutions, IT services, technology partner, software partner, web to cloud, w2c tech, w2ctech, generative AI, GenAI, GPT integration, OpenAI API integration, Anthropic Claude, Google Gemini, AI model fine-tuning, prompt engineering, MLOps, machine learning operations, vector database, text embeddings, multimodal AI, AI governance, responsible AI, AI ethics, AI safety, AI readiness assessment, predictive AI, AI pipeline, AI model deployment, AI model serving, AI inference, AI training, AI evaluation, AI monitoring, AI observability, AI SaaS, AI platform development, AI workflow, AI orchestration, conversational AI chatbot, voice AI, speech recognition, AI-powered search, AI-powered analytics, AI for business, enterprise AI platform, edge AI computing, cognitive AI services, multi-cloud architecture, hybrid cloud solutions, cloud security services, cloud compliance, cloud networking, VPC setup, cloud storage, CDN content delivery network, managed cloud databases, cloud functions, serverless functions, cloud load balancing, auto-scaling cloud, cloud backup, disaster recovery, Prometheus monitoring, Grafana dashboards, Datadog monitoring, cloud IAM, identity and access management, cloud governance, cloud FinOps, financial operations, platform engineering, GitOps deployment, ArgoCD, Terraform infrastructure, Pulumi, Ansible automation, cloud-native security, cloud landing zone, AWS well-architected, cloud center of excellence, cloud operations, Google Analytics 4, GA4 setup, Google Tag Manager, GTM implementation, Google Search Console, GSC verification, web analytics implementation, conversion tracking, event tracking, data layer, user behavior analytics, A/B testing, experimentation, marketing analytics, performance analytics, real-time analytics dashboard, Looker Studio, Google BigQuery, Mixpanel, Amplitude analytics, Hotjar, heatmaps, session recording, funnel analysis, cohort analysis, retention analytics, attribution modeling, marketing attribution, Facebook pixel, LinkedIn Insight Tag, Meta analytics, mobile app analytics, product analytics, growth analytics, SEO analytics, social media analytics, customer analytics, analytics implementation, analytics consulting, freelance software developer, contract software engineer, IT outsourcing company, offshore development company, nearshore software development, remote-first software team, technology consulting firm, IT solutions provider, digital transformation agency, AI consulting firm, cloud consulting company, SaaS consulting, software development agency, web development company, custom web development, bespoke software development",
       foundingDate: "2020",
       foundingLocation: {
         "@type": "Place",
@@ -46,6 +48,26 @@ export default function StructuredData() {
       taxID: "09AADCW3276E1Z7",
       vatID: "09AADCW3276E1Z7",
       duns: "U72900UP2022PTC168187",
+      identifier: [
+        {
+          "@type": "PropertyValue",
+          propertyID: "GA4 Measurement ID",
+          name: "google_analytics_4",
+          value: process.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXXXX",
+        },
+        {
+          "@type": "PropertyValue",
+          propertyID: "Google Search Console Verification",
+          name: "google_search_console",
+          value: process.env.NEXT_PUBLIC_GSC_VERIFICATION || "ADD_YOUR_GOOGLE_VERIFICATION_CODE",
+        },
+        {
+          "@type": "PropertyValue",
+          propertyID: "Google Tag Manager",
+          name: "google_tag_manager",
+          value: process.env.NEXT_PUBLIC_GTM_ID || "GTM-XXXXXXXXX",
+        },
+      ],
       knowsLanguage: ["English", "German", "French"],
       knowsAbout: [
         {
@@ -271,6 +293,362 @@ export default function StructuredData() {
         {
           "@type": "Thing",
           name: "Digital Marketing",
+        },
+        {
+          "@type": "Thing",
+          name: "Generative AI (GenAI)",
+        },
+        {
+          "@type": "Thing",
+          name: "GPT Integration",
+        },
+        {
+          "@type": "Thing",
+          name: "OpenAI API",
+        },
+        {
+          "@type": "Thing",
+          name: "Anthropic Claude",
+        },
+        {
+          "@type": "Thing",
+          name: "Google Gemini",
+        },
+        {
+          "@type": "Thing",
+          name: "AI Model Fine-Tuning",
+        },
+        {
+          "@type": "Thing",
+          name: "Prompt Engineering",
+        },
+        {
+          "@type": "Thing",
+          name: "MLOps (Machine Learning Operations)",
+        },
+        {
+          "@type": "Thing",
+          name: "Vector Databases",
+        },
+        {
+          "@type": "Thing",
+          name: "Text Embeddings",
+        },
+        {
+          "@type": "Thing",
+          name: "Multimodal AI",
+        },
+        {
+          "@type": "Thing",
+          name: "AI Governance",
+        },
+        {
+          "@type": "Thing",
+          name: "Responsible AI",
+        },
+        {
+          "@type": "Thing",
+          name: "AI Ethics and Safety",
+        },
+        {
+          "@type": "Thing",
+          name: "AI Readiness Assessment",
+        },
+        {
+          "@type": "Thing",
+          name: "Predictive AI",
+        },
+        {
+          "@type": "Thing",
+          name: "Cognitive Services",
+        },
+        {
+          "@type": "Thing",
+          name: "AI Pipeline Engineering",
+        },
+        {
+          "@type": "Thing",
+          name: "AI Model Deployment",
+        },
+        {
+          "@type": "Thing",
+          name: "AI Model Serving and Inference",
+        },
+        {
+          "@type": "Thing",
+          name: "AI Monitoring and Observability",
+        },
+        {
+          "@type": "Thing",
+          name: "AI SaaS Platform Development",
+        },
+        {
+          "@type": "Thing",
+          name: "Enterprise AI Solutions",
+        },
+        {
+          "@type": "Thing",
+          name: "AI Workflow Automation",
+        },
+        {
+          "@type": "Thing",
+          name: "Conversational AI",
+        },
+        {
+          "@type": "Thing",
+          name: "Speech Recognition and Voice AI",
+        },
+        {
+          "@type": "Thing",
+          name: "AI-Powered Search",
+        },
+        {
+          "@type": "Thing",
+          name: "AI-Powered Analytics",
+        },
+        {
+          "@type": "Thing",
+          name: "Edge AI",
+        },
+        {
+          "@type": "Thing",
+          name: "On-Device AI",
+        },
+        {
+          "@type": "Thing",
+          name: "Multi-Cloud Architecture",
+        },
+        {
+          "@type": "Thing",
+          name: "Hybrid Cloud Solutions",
+        },
+        {
+          "@type": "Thing",
+          name: "Cloud Security",
+        },
+        {
+          "@type": "Thing",
+          name: "Cloud Compliance",
+        },
+        {
+          "@type": "Thing",
+          name: "Cloud Networking and VPC",
+        },
+        {
+          "@type": "Thing",
+          name: "Cloud Storage Solutions",
+        },
+        {
+          "@type": "Thing",
+          name: "Content Delivery Network (CDN)",
+        },
+        {
+          "@type": "Thing",
+          name: "Managed Cloud Databases",
+        },
+        {
+          "@type": "Thing",
+          name: "Serverless Functions",
+        },
+        {
+          "@type": "Thing",
+          name: "Cloud Load Balancing",
+        },
+        {
+          "@type": "Thing",
+          name: "Auto-Scaling",
+        },
+        {
+          "@type": "Thing",
+          name: "Cloud Backup and Disaster Recovery",
+        },
+        {
+          "@type": "Thing",
+          name: "Prometheus",
+        },
+        {
+          "@type": "Thing",
+          name: "Grafana",
+        },
+        {
+          "@type": "Thing",
+          name: "Datadog",
+        },
+        {
+          "@type": "Thing",
+          name: "Cloud IAM (Identity and Access Management)",
+        },
+        {
+          "@type": "Thing",
+          name: "Cloud Governance",
+        },
+        {
+          "@type": "Thing",
+          name: "Cloud FinOps (Financial Operations)",
+        },
+        {
+          "@type": "Thing",
+          name: "Platform Engineering",
+        },
+        {
+          "@type": "Thing",
+          name: "GitOps",
+        },
+        {
+          "@type": "Thing",
+          name: "ArgoCD",
+        },
+        {
+          "@type": "Thing",
+          name: "Terraform",
+        },
+        {
+          "@type": "Thing",
+          name: "Pulumi",
+        },
+        {
+          "@type": "Thing",
+          name: "Ansible",
+        },
+        {
+          "@type": "Thing",
+          name: "Cloud-Native Security",
+        },
+        {
+          "@type": "Thing",
+          name: "Cloud Landing Zone",
+        },
+        {
+          "@type": "Thing",
+          name: "AWS Well-Architected Framework",
+        },
+        {
+          "@type": "Thing",
+          name: "Cloud Center of Excellence",
+        },
+        {
+          "@type": "Thing",
+          name: "Google Analytics 4 (GA4)",
+        },
+        {
+          "@type": "Thing",
+          name: "Google Tag Manager (GTM)",
+        },
+        {
+          "@type": "Thing",
+          name: "Google Search Console (GSC)",
+        },
+        {
+          "@type": "Thing",
+          name: "Web Analytics Implementation",
+        },
+        {
+          "@type": "Thing",
+          name: "Conversion Tracking",
+        },
+        {
+          "@type": "Thing",
+          name: "Event Tracking and Data Layer",
+        },
+        {
+          "@type": "Thing",
+          name: "User Behavior Analytics",
+        },
+        {
+          "@type": "Thing",
+          name: "A/B Testing and Experimentation",
+        },
+        {
+          "@type": "Thing",
+          name: "Marketing Analytics",
+        },
+        {
+          "@type": "Thing",
+          name: "Performance Analytics",
+        },
+        {
+          "@type": "Thing",
+          name: "Real-Time Analytics",
+        },
+        {
+          "@type": "Thing",
+          name: "Looker Studio",
+        },
+        {
+          "@type": "Thing",
+          name: "Google BigQuery",
+        },
+        {
+          "@type": "Thing",
+          name: "Mixpanel Analytics",
+        },
+        {
+          "@type": "Thing",
+          name: "Amplitude Analytics",
+        },
+        {
+          "@type": "Thing",
+          name: "Hotjar Heatmaps and Session Recording",
+        },
+        {
+          "@type": "Thing",
+          name: "Funnel Analysis",
+        },
+        {
+          "@type": "Thing",
+          name: "Cohort Analysis",
+        },
+        {
+          "@type": "Thing",
+          name: "Retention Analytics",
+        },
+        {
+          "@type": "Thing",
+          name: "Attribution Modeling",
+        },
+        {
+          "@type": "Thing",
+          name: "Marketing Attribution",
+        },
+        {
+          "@type": "Thing",
+          name: "Facebook Pixel",
+        },
+        {
+          "@type": "Thing",
+          name: "LinkedIn Insight Tag",
+        },
+        {
+          "@type": "Thing",
+          name: "Meta Analytics",
+        },
+        {
+          "@type": "Thing",
+          name: "Mobile App Analytics",
+        },
+        {
+          "@type": "Thing",
+          name: "Product Analytics",
+        },
+        {
+          "@type": "Thing",
+          name: "Growth Analytics",
+        },
+        {
+          "@type": "Thing",
+          name: "SEO Analytics",
+        },
+        {
+          "@type": "Thing",
+          name: "Social Media Analytics",
+        },
+        {
+          "@type": "Thing",
+          name: "Customer Analytics",
+        },
+        {
+          "@type": "Thing",
+          name: "Analytics Dashboard Development",
         },
       ],
       areaServed: [
@@ -900,6 +1278,15 @@ export default function StructuredData() {
                             "Professional web design, responsive website development, SEO services, search engine optimization, and digital marketing strategy to grow your online presence and generate leads.",
                         },
                       },
+                      {
+                        "@type": "Offer",
+                        itemOffered: {
+                          "@type": "Service",
+                          name: "Web Analytics & Tracking Implementation",
+                          description:
+                            "Google Analytics 4, GA4 setup and configuration, Google Tag Manager, GTM implementation, Google Search Console, GSC integration, conversion tracking, event tracking, data layer architecture, custom analytics dashboards, Looker Studio reports, BigQuery data warehouse, user behavior analytics, Facebook pixel and LinkedIn Insight Tag implementation, marketing attribution, funnel analysis, cohort analysis, and end-to-end analytics strategy for data-driven decision making.",
+                        },
+                      },
                     ],
                   },
                 },
@@ -1000,7 +1387,9 @@ export default function StructuredData() {
   ];
 
   return (
-    <script
+    <Script
+      id="structured-data"
+      strategy="beforeInteractive"
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
     />

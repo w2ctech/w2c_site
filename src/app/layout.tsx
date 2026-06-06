@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import StructuredData from "@/components/StructuredData";
 import "./globals.css";
 
@@ -21,13 +22,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <StructuredData />
         <meta name="theme-color" content="#1a1a2e" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `try{document.documentElement.className=localStorage.getItem('w2c-theme')==='light'?'theme-light':''}catch(e){document.documentElement.className=''}`,
-          }}
-        />
       </head>
-      <body>{children}</body>
+      <body suppressHydrationWarning>
+        <Script id="theme-init" strategy="beforeInteractive">
+          {`try{document.documentElement.className=localStorage.getItem('w2c-theme')==='light'?'theme-light':''}catch(e){document.documentElement.className=''}`}
+        </Script>
+        {children}
+      </body>
     </html>
   );
 }

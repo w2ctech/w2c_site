@@ -5,22 +5,18 @@ import { Card } from "../ui/Card";
 import { Button } from "../ui/Button";
 import { Arrow } from "../ui/Icons";
 
-function Placeholder({ label }: { label: string }) {
-  return (
-    <div className="relative bg-card-solid border border-line rounded-[var(--radius-card)] flex items-center justify-center overflow-hidden text-tx-3 bg-[repeating-linear-gradient(-45deg,oklch(0.92_0.02_264/0.05)_0_1px,transparent_1px_11px)]">
-      <span className="font-mono text-xs tracking-[0.04em] bg-[oklch(0.16_0.018_264/0.7)] py-1.5 px-3 rounded-full border border-line-2 text-tx-2">
-        {label}
-      </span>
-    </div>
-  );
-}
-
 export function AboutTeaser() {
   return (
     <section className="mx-auto max-w-[1240px] px-[clamp(20px,5vw,64px)] py-[clamp(72px,10vw,140px)]">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-[clamp(28px,5vw,72px)] items-center">
         <Reveal>
-          <Placeholder label="team / office photo" />
+          <div className="relative rounded-[var(--radius-card)] overflow-hidden border border-line aspect-[4/3]">
+            <img
+              src="/assets/office_photo.png"
+              alt="W2C Tech team at office"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
         </Reveal>
         <div>
           <Reveal><Eyebrow>Who we are</Eyebrow></Reveal>

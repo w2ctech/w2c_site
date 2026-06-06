@@ -28,15 +28,21 @@ export function Cases() {
             </p>
           </Reveal>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-[22px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {CASES.map((c, i) => (
             <Reveal key={c.name} delay={i * 80}>
               <Card hover>
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 sm:gap-2.5">
-                  <h3 className="font-display font-semibold text-tx text-[clamp(18px,2vw,27px)] leading-tight">{c.name}</h3>
-                  <span className="font-mono text-[10.5px] sm:text-[11.5px] text-tx-3 whitespace-nowrap">{c.region}</span>
+                <div className="flex flex-col gap-1 mb-2.5">
+                  <h3 className="font-display font-semibold text-tx text-lg sm:text-xl leading-tight break-words">
+                    {c.name}
+                  </h3>
+                  <span className="font-mono text-[10.5px] text-tx-3 leading-tight">
+                    {c.region}
+                  </span>
                 </div>
-                <p className="text-[14px] sm:text-[15.5px] text-tx-2 mt-2.5 leading-relaxed">{c.desc}</p>
+                <p className="text-[13px] sm:text-[14px] text-tx-2 leading-relaxed break-words">
+                  {c.desc}
+                </p>
                 <div className="mt-3">
                   <Tag ai>{c.tag}</Tag>
                 </div>

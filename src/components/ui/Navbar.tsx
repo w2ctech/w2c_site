@@ -23,7 +23,7 @@ export function Navbar() {
   const [theme, toggleTheme] = useTheme();
   const pathname = usePathname();
   const { locale, dict } = useLocale();
-  const t = dict as Record<string, Record<string, string>>;
+  const t = (dict as Record<string, Record<string, string>>) || {};
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);

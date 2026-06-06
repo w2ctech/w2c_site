@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const FOUNDERS = [
-  { name: "Yogendra Singh", role: "Director", bio: "14+ years across the IT industry — leading delivery, client partnerships and the engineering vision behind W2C.", img: "/assets/yogendra.jpeg" },
+  { name: "Yogendra Singh", role: "Director — Software Eng & AI", bio: "14+ years across the IT industry — specializing in software engineering and artificial intelligence. Leading delivery, client partnerships and the engineering vision behind W2C.", img: "/assets/yogendra.jpeg" },
   { name: "Bishwajeet Biswas", role: "Director — Cloud", bio: "Heads the cloud and infrastructure practice, turning Web to Cloud from a tagline into production systems.", img: "/assets/bishwajeet.png" },
   { name: "Ekta Singh", role: "Senior HR Specialist", bio: "Leads people and talent — building the bench, the culture and the vendor network that staffs every project.", img: "/assets/ekta.jpeg" },
 ];
@@ -23,15 +23,6 @@ const VALUES = [
   ["Curious about AI", "We treat AI as a tool, not a trophy — applied where it genuinely makes software better."],
 ];
 
-function Placeholder({ label }: { label: string }) {
-  return (
-    <div className="relative bg-card-solid border border-line rounded-[var(--radius-card)] flex items-center justify-center overflow-hidden text-tx-3 aspect-[4/5] w-full bg-[repeating-linear-gradient(-45deg,oklch(0.92_0.02_264/0.05)_0_1px,transparent_1px_11px)]">
-      <span className="font-mono text-xs tracking-[0.04em] bg-[oklch(0.16_0.018_264/0.7)] py-1.5 px-3 rounded-full border border-line-2 text-tx-2">
-        {label}
-      </span>
-    </div>
-  );
-}
 
 export default function AboutPage() {
   const initials = (n: string) => n.split(" ").map((w) => w[0]).join("").slice(0, 2);
@@ -47,7 +38,13 @@ export default function AboutPage() {
       <section className="mx-auto max-w-[1240px] px-[clamp(20px,5vw,64px)] py-[clamp(72px,10vw,140px)]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[clamp(28px,5vw,72px)]">
           <Reveal>
-            <Placeholder label="team at work" />
+            <div className="relative rounded-[var(--radius-card)] overflow-hidden border border-line aspect-[4/5]">
+              <img
+                src="/assets/Our_story.png"
+                alt="From Web to Cloud to AI journey"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
           </Reveal>
           <div>
             <Reveal><Eyebrow>Our story</Eyebrow></Reveal>

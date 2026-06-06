@@ -5,7 +5,7 @@ const PARTNERS = [
   { name: "Token Metrix", logo: null },
 ];
 
-const TRACK = [...PARTNERS, ...PARTNERS, ...PARTNERS];
+const TRACK = [...PARTNERS, ...PARTNERS, ...PARTNERS, ...PARTNERS];
 
 export function Partners() {
   return (
@@ -18,13 +18,13 @@ export function Partners() {
       <div className="marquee-container">
         <div className="marquee-track">
           {TRACK.map((p, i) => (
-            <div key={i} className="flex items-center justify-center min-w-[120px] px-4">
+            <div key={i} className="flex items-center justify-center min-w-[120px] px-6">
               {p.logo ? (
-                <div className="h-10 flex items-center">
+                <div className="bg-white rounded-lg py-2.5 px-5 flex items-center shadow-sm">
                   <img
                     src={p.logo}
                     alt={p.name}
-                    className="h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity logo-lighten"
+                    className="h-7 w-auto object-contain"
                   />
                 </div>
               ) : (

@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import type { Locale } from "@/i18n/config";
-import { locales } from "@/i18n/config";
+import { defaultLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/request";
 import { ClientShell } from "./client-shell";
 
@@ -18,7 +18,7 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale: rawLocale } = await params;
-  const locale = rawLocale as Locale;
+  const locale = locales.includes(rawLocale as Locale) ? (rawLocale as Locale) : defaultLocale;
   const dict = await getDictionary(locale);
 
   return <ClientShell locale={locale} dict={dict}>{children}</ClientShell>;
