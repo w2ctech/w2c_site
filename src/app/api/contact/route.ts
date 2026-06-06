@@ -1,8 +1,9 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-const EMAIL_TO = process.env.EMAIL_TO || "w2ctechsolution@gmail.com";
-const EMAIL_FROM = process.env.EMAIL_FROM || "w2ctechsolution@gmail.com";
+const EMAIL_TO = process.env.EMAIL_TO || "admin@w2ctech.com";
+const EMAIL_CC = process.env.EMAIL_CC || "w2ctechsolution@gmail.com";
+const EMAIL_FROM = process.env.EMAIL_FROM || "admin@w2ctech.com";
 const SMTP_HOST = process.env.SMTP_HOST || "smtp.gmail.com";
 const SMTP_PORT = Number(process.env.SMTP_PORT) || 587;
 const SMTP_USER = process.env.SMTP_USER || "w2ctechsolution@gmail.com";
@@ -29,6 +30,7 @@ export async function POST(request: Request) {
     await transporter.sendMail({
       from: `"${name}" <${EMAIL_FROM}>`,
       to: EMAIL_TO,
+      cc: EMAIL_CC,
       replyTo: email,
       subject: `New Website Inquiry — ${serviceLine} from ${name}${company ? ` (${company})` : ""}`,
       html: `
@@ -78,7 +80,8 @@ export async function POST(request: Request) {
                           <td style="font-size:12px;color:#666;">
                             <a href="https://w2ctech.com" style="color:#d4a83a;text-decoration:none;">w2ctech.com</a>
                             &nbsp;·&nbsp; WhatsApp +91-9626222140
-                            &nbsp;·&nbsp; info@w2ctech.com
+                            &nbsp;·&nbsp; <a href="mailto:admin@w2ctech.com" style="color:#d4a83a;text-decoration:none;">admin@w2ctech.com</a>
+                            &nbsp;·&nbsp; <a href="mailto:w2ctechsolution@gmail.com" style="color:#d4a83a;text-decoration:none;">w2ctechsolution@gmail.com</a>
                           </td>
                           <td align="right" style="font-size:11px;color:#555;">CIN: U72900UP2022PTC168187</td>
                         </tr>

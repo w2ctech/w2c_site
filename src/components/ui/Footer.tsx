@@ -75,7 +75,12 @@ export function Footer() {
             <h4 className="font-mono text-xs tracking-[0.14em] uppercase font-medium text-on-ink mb-[18px]">Get in touch</h4>
             <ul className="grid gap-[11px] text-[15px] list-none p-0 m-0">
               <li>
-                <a href="mailto:w2ctechsolution@gmail.com" className="text-on-ink-2 hover:text-accent-ink transition-colors">
+                <a href="mailto:admin@w2ctech.com" className="text-on-ink-2 hover:text-accent-ink transition-colors">
+                  admin@w2ctech.com
+                </a>
+              </li>
+              <li>
+                <a href="mailto:w2ctechsolution@gmail.com" className="text-xs text-on-ink-2 hover:text-accent-ink transition-colors">
                   w2ctechsolution@gmail.com
                 </a>
               </li>

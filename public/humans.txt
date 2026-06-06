@@ -1,0 +1,20 @@
+/* TEAM */
+
+Director — Software Eng & AI: Yogendra Singh
+Director — Cloud: Bishwajeet Biswas
+Senior HR Specialist: Ekta Singh
+
+Site: https://w2ctech.com
+Contact: admin@w2ctech.com
+Contact: w2ctechsolution@gmail.com
+Twitter / X: @w2ctech
+Location: Delhi, India · Hamburg, Germany · Dubuque, Iowa, USA
+
+/* SITE */
+
+Last update: 2026
+Language: English / Deutsch / Français
+Doctype: HTML5
+IDE: VS Code
+Stack: Next.js 16, React 19, TypeScript, Tailwind CSS 4, Vercel
+Standards: WCAG, OpenGraph, Schema.org, Web Vitals, llms.txt

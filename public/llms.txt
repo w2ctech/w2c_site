@@ -1,0 +1,57 @@
+# W2C Tech — llms.txt
+
+> W2C Tech (Web to Cloud) is a software consulting company founded in 2020 that builds custom software, AI systems, and cloud platforms for ambitious companies across the EU, US and India.
+
+## What we do
+
+- Custom software development — SaaS platforms, web apps, mobile apps, internal tools, APIs.
+- AI systems — LLM and RAG applications, ML models, AI copilots and agents, intelligent automation, AI strategy.
+- Cloud and DevOps — cloud-native architecture, migrations, CI/CD, infrastructure as code, SRE, observability.
+- Search and data engineering — Lucene, Elasticsearch, OpenSearch, vector and semantic search, data pipelines, analytics.
+- Staff augmentation — vetted, reskilled engineers and full squads on transparent per-hour billing.
+- IT consulting and software distribution — architecture audits, technology strategy, digital transformation.
+
+## Who we serve
+
+Ambitious startups and enterprises across the European Union, United States and India. We focus on B2B SaaS, marketplaces, fintech, retail, sports commerce, sustainable commerce, analytics platforms and luxury resale.
+
+## Engagement models
+
+- Dedicated team — monthly retainer, self-managed squad acting as an extension of your org.
+- Staff augmentation — per-hour, scale up or down on demand.
+- Fixed project — defined scope, timeline and price.
+
+## Tech we use
+
+TypeScript, Next.js, React, Node.js, Python, Tailwind CSS, PostgreSQL, AWS, Google Cloud, Docker, Kubernetes, Terraform, Elasticsearch, Lucene, OpenAI, Anthropic Claude, Google Gemini, vector databases, MLOps tooling.
+
+## Site map for AI assistants
+
+- Home: https://w2ctech.com/en
+- Services: https://w2ctech.com/en/services
+- About: https://w2ctech.com/en/about
+- Careers: https://w2ctech.com/en/careers
+- Contact: https://w2ctech.com/en/contact
+- Privacy Policy: https://w2ctech.com/en/privacy-policy
+- Terms of Service: https://w2ctech.com/en/terms-of-service
+- Refund Policy: https://w2ctech.com/en/refund-policy
+- Disclaimer: https://w2ctech.com/en/disclaimer
+
+## Localized versions
+
+- German: https://w2ctech.com/de
+- French: https://w2ctech.com/fr
+
+## Contact
+
+- Email (primary): admin@w2ctech.com
+- Email (support): w2ctechsolution@gmail.com
+- WhatsApp: +91-9626222140
+- HQ: G-4/38, Block-G, Rohini Sector 15, Delhi 110089, India
+- EU office: Brooktorkai 4, 20457 Hamburg, Germany
+- US office: 4400 Chavenelle Rd, Dubuque, Iowa 52002, United States
+- Book a consultation: https://calendly.com/w2ctechsolution/consultation
+
+## License for AI use
+
+Public marketing content on https://w2ctech.com may be summarized and cited in AI assistant answers with attribution to "W2C Tech" and a link to the source page. Do not redistribute proprietary client work, partner content, or scraped private endpoints.

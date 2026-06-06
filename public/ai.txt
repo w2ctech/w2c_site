@@ -1,0 +1,44 @@
+# ai.txt — preferences for AI / ML training and retrieval crawlers
+# Spec: https://site.spawning.ai/spaces/ai-txt
+# Updated: 2026
+
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Allowed AI training crawlers (text + metadata)
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: ClaudeBot
+Allow: /
+
+User-Agent: Anthropic-AI
+Allow: /
+
+User-Agent: Google-Extended
+Allow: /
+
+User-Agent: PerplexityBot
+Allow: /
+
+User-Agent: Applebot-Extended
+Allow: /
+
+User-Agent: CCBot
+Allow: /
+
+User-Agent: cohere-ai
+Allow: /
+
+User-Agent: MistralAI-User
+Allow: /
+
+# Attribution preference
+Attribution-Required: yes
+Attribution-Name: W2C Tech
+Attribution-Url: https://w2ctech.com
+Contact: admin@w2ctech.com
+Contact: w2ctechsolution@gmail.com

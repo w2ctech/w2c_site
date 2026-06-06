@@ -3,13 +3,26 @@ import { Eyebrow } from "@/components/ui/Typography";
 import { Card } from "@/components/ui/Card";
 import { Spark } from "@/components/ui/Icons";
 import { PageHero, CTASection } from "@/components/ui/PageHero";
+import { JsonLd } from "@/components/JsonLd";
+import { buildPageMetadata, breadcrumbJsonLd, PAGE_KEYWORDS } from "@/lib/seo";
+import type { Locale } from "@/i18n/config";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "About",
-  description:
-    "A small, senior team that builds big. Since 2020 W2C Tech has delivered software, AI and cloud systems for partners across the EU, US and India.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return buildPageMetadata({
+    locale,
+    path: "/about",
+    title: "About W2C Tech | Software, AI & Cloud Team",
+    description:
+      "A small, senior team that builds big. Since 2020 W2C Tech has delivered software, AI and cloud systems for partners across the EU, US and India.",
+    keywords: PAGE_KEYWORDS.about,
+  });
+}
 
 const FOUNDERS = [
   { name: "Yogendra Singh", role: "Director — Software Eng & AI", bio: "14+ years across the IT industry — specializing in software engineering and artificial intelligence. Leading delivery, client partnerships and the engineering vision behind W2C.", img: "/assets/yogendra.jpeg" },
@@ -25,11 +38,20 @@ const VALUES = [
 ];
 
 
-export default function AboutPage() {
-  const initials = (n: string) => n.split(" ").map((w) => w[0]).join("").slice(0, 2);
+export default async function AboutPage({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}) {
+  const { locale } = await params;
+  const breadcrumbs = breadcrumbJsonLd(locale, [
+    { name: "Home", path: "" },
+    { name: "About", path: "/about" },
+  ]);
 
   return (
     <main>
+      <JsonLd id="ld-breadcrumb-about" data={breadcrumbs} />
       <PageHero
         kicker="About W2C Tech"
         title={<>A software team that grows businesses, not just code.</>}

@@ -141,13 +141,16 @@ export default function ContactPage() {
             <Reveal>
               <Card>
                 <span className="font-mono text-xs text-accent tracking-[0.12em]">DIRECT</span>
-                <a href="mailto:w2ctechsolution@gmail.com" className="block font-display text-[22px] mt-3.5 mb-1.5 text-on-ink break-all">
+                <a href="mailto:admin@w2ctech.com" className="block font-display text-[22px] mt-3.5 mb-1 text-on-ink break-all">
+                  admin@w2ctech.com
+                </a>
+                <a href="mailto:w2ctechsolution@gmail.com" className="block text-[14px] text-on-ink-2 hover:text-on-ink transition-colors">
                   w2ctechsolution@gmail.com
                 </a>
-                <a href="https://wa.me/919626222140" target="_blank" rel="noopener noreferrer" className="block font-display text-[18px] mt-2 text-accent-ink hover:text-accent transition-colors">
+                <a href="https://wa.me/919626222140" target="_blank" rel="noopener noreferrer" className="block text-[15px] mt-2 text-accent-ink hover:text-accent transition-colors">
                   WhatsApp +91-9626222140
                 </a>
-                <p className="text-[15px] text-on-ink-2 mt-2">Prefer email or WhatsApp? Reach us directly and we will route you to the right person.</p>
+                <p className="text-[14px] text-on-ink-2 mt-2.5">Prefer email or WhatsApp? Reach us directly.</p>
               </Card>
             </Reveal>
             <Reveal delay={80}>

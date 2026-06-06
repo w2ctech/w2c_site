@@ -1,13 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { buildPageMetadata, PAGE_KEYWORDS } from "@/lib/seo";
+import type { Locale } from "@/i18n/config";
 
-export const metadata: Metadata = {
-  title: "Refund Policy",
-  description:
-    "Refund and Cancellation Policy for w2ctech - Terms for refunds on our web design, development, and marketing services.",
-  robots: { index: true, follow: true },
-  alternates: { canonical: "https://w2ctech.com/refund-policy" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return buildPageMetadata({
+    locale,
+    path: "/refund-policy",
+    title: "Refund & Cancellation Policy | W2C Tech",
+    description:
+      "Refund and cancellation terms for W2C Tech software, AI, cloud, search and staff augmentation services.",
+    keywords: PAGE_KEYWORDS.refund,
+  });
+}
 
 export default function RefundPolicy() {
   return (
@@ -34,7 +44,7 @@ export default function RefundPolicy() {
             <h2 className="text-2xl font-semibold text-gray-900">2. Project Cancellation</h2>
             <p className="mt-3">
               Clients may request cancellation of a project by providing written notice via email
-              to <a href="mailto:info@w2ctech.com" className="text-blue-600 hover:underline">info@w2ctech.com</a>. The refund amount depends on the stage of the project at
+              to <a href="mailto:admin@w2ctech.com" className="text-blue-600 hover:underline">admin@w2ctech.com</a>. The refund amount depends on the stage of the project at
               the time of cancellation:
             </p>
             <ul className="mt-3 list-disc pl-6 space-y-2">
@@ -93,7 +103,7 @@ export default function RefundPolicy() {
             <h2 className="text-2xl font-semibold text-gray-900">5. Refund Processing</h2>
             <ul className="mt-3 list-disc pl-6 space-y-1">
               <li>All refund requests must be submitted in writing to{" "}
-                <a href="mailto:info@w2ctech.com" className="text-blue-600 hover:underline">info@w2ctech.com</a>.
+                <a href="mailto:admin@w2ctech.com" className="text-blue-600 hover:underline">admin@w2ctech.com</a>.
               </li>
               <li>Refund requests are reviewed within 7 business days.</li>
               <li>Approved refunds will be processed within 15 business days.</li>
@@ -139,7 +149,7 @@ export default function RefundPolicy() {
             <h2 className="text-2xl font-semibold text-gray-900">9. Contact</h2>
             <p className="mt-3">
               For refund requests or questions about this policy:{" "}
-              <a href="mailto:info@w2ctech.com" className="text-blue-600 hover:underline">info@w2ctech.com</a>
+              <a href="mailto:admin@w2ctech.com" className="text-blue-600 hover:underline">admin@w2ctech.com</a>
             </p>
           </section>
         </div>

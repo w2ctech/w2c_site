@@ -1,0 +1,6 @@
+Contact: mailto:admin@w2ctech.com
+Contact: mailto:w2ctechsolution@gmail.com
+Expires: 2030-01-01T00:00:00.000Z
+Preferred-Languages: en, de, fr
+Canonical: https://w2ctech.com/.well-known/security.txt
+Policy: https://w2ctech.com/en/privacy-policy

@@ -1,13 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { buildPageMetadata, PAGE_KEYWORDS } from "@/lib/seo";
+import type { Locale } from "@/i18n/config";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description:
-    "Privacy Policy of w2ctech - How we collect, use, and protect your personal data.",
-  robots: { index: true, follow: true },
-  alternates: { canonical: "https://w2ctech.com/privacy-policy" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return buildPageMetadata({
+    locale,
+    path: "/privacy-policy",
+    title: "Privacy Policy | W2C Tech",
+    description:
+      "Privacy Policy of W2C Tech — how we collect, use, and protect your personal data across our software, AI and cloud engagements.",
+    keywords: PAGE_KEYWORDS.privacy,
+  });
+}
 
 export default function PrivacyPolicy() {
   return (
@@ -138,7 +148,7 @@ export default function PrivacyPolicy() {
             </p>
             <div className="mt-2 rounded-lg bg-gray-50 p-4">
               <p>Grievance Officer, w2ctech</p>
-              <p>Email: <a href="mailto:info@w2ctech.com" className="text-blue-600 hover:underline">info@w2ctech.com</a></p>
+              <p>Email: <a href="mailto:admin@w2ctech.com" className="text-blue-600 hover:underline">admin@w2ctech.com</a></p>
               <p>Phone: +91-XXXXXXXXXX</p>
               <p>Address: 1234 N Spring St, Los Angeles, CA 90012</p>
             </div>
@@ -148,7 +158,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-gray-900">12. Contact Us</h2>
             <p className="mt-3">
               If you have questions about this Privacy Policy, please contact us at{" "}
-              <a href="mailto:info@w2ctech.com" className="text-blue-600 hover:underline">info@w2ctech.com</a>.
+              <a href="mailto:admin@w2ctech.com" className="text-blue-600 hover:underline">admin@w2ctech.com</a>.
             </p>
           </section>
         </div>

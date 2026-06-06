@@ -1,13 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { buildPageMetadata, PAGE_KEYWORDS } from "@/lib/seo";
+import type { Locale } from "@/i18n/config";
 
-export const metadata: Metadata = {
-  title: "Disclaimer",
-  description:
-    "Disclaimer for w2ctech - Limitations of liability and use of information on our website.",
-  robots: { index: true, follow: true },
-  alternates: { canonical: "https://w2ctech.com/disclaimer" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return buildPageMetadata({
+    locale,
+    path: "/disclaimer",
+    title: "Disclaimer | W2C Tech",
+    description:
+      "Website disclaimer outlining limitations of liability and use of information published on w2ctech.com.",
+    keywords: PAGE_KEYWORDS.disclaimer,
+  });
+}
 
 export default function Disclaimer() {
   return (
@@ -112,7 +122,7 @@ export default function Disclaimer() {
             <h2 className="text-2xl font-semibold text-gray-900">10. Contact</h2>
             <p className="mt-3">
               For questions regarding this disclaimer, contact:{" "}
-              <a href="mailto:info@w2ctech.com" className="text-blue-600 hover:underline">info@w2ctech.com</a>
+              <a href="mailto:admin@w2ctech.com" className="text-blue-600 hover:underline">admin@w2ctech.com</a>
             </p>
           </section>
         </div>

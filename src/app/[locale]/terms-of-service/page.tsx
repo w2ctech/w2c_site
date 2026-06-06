@@ -1,13 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { buildPageMetadata, PAGE_KEYWORDS } from "@/lib/seo";
+import type { Locale } from "@/i18n/config";
 
-export const metadata: Metadata = {
-  title: "Terms of Service",
-  description:
-    "Terms of Service for w2ctech - Governing your use of our website and services.",
-  robots: { index: true, follow: true },
-  alternates: { canonical: "https://w2ctech.com/terms-of-service" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return buildPageMetadata({
+    locale,
+    path: "/terms-of-service",
+    title: "Terms of Service | W2C Tech",
+    description:
+      "Terms of Service governing your use of W2C Tech's website and our software, AI, cloud, search and staff augmentation engagements.",
+    keywords: PAGE_KEYWORDS.terms,
+  });
+}
 
 export default function TermsOfService() {
   return (
@@ -140,7 +150,7 @@ export default function TermsOfService() {
             <h2 className="text-2xl font-semibold text-gray-900">11. Contact</h2>
             <p className="mt-3">
               For questions about these Terms, please contact:{" "}
-              <a href="mailto:info@w2ctech.com" className="text-blue-600 hover:underline">info@w2ctech.com</a>
+              <a href="mailto:admin@w2ctech.com" className="text-blue-600 hover:underline">admin@w2ctech.com</a>
             </p>
           </section>
         </div>

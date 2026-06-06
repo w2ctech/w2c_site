@@ -9,7 +9,7 @@ export default function StructuredData() {
     logo: "https://w2ctech.com/assets/w2c-logo.png",
     description:
       "Custom software, AI systems, and cloud for ambitious companies across the EU, US and India. Founded 2020.",
-    email: "w2ctechsolution@gmail.com",
+    email: "admin@w2ctech.com",
     telephone: "+91-9626222140",
     address: {
       "@type": "PostalAddress",
@@ -23,13 +23,22 @@ export default function StructuredData() {
     sameAs: [
       "https://wa.me/919626222140",
     ],
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "sales",
-      email: "w2ctechsolution@gmail.com",
-      telephone: "+91-9626222140",
-      availableLanguage: ["English", "German", "French"],
-    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        email: "admin@w2ctech.com",
+        telephone: "+91-9626222140",
+        availableLanguage: ["English", "German", "French"],
+      },
+      {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: "w2ctechsolution@gmail.com",
+        telephone: "+91-9626222140",
+        availableLanguage: ["English", "German", "French"],
+      },
+    ],
     knowsAbout: [
       "Software Development",
       "Artificial Intelligence",
