@@ -54,6 +54,6 @@
       "permanent": true
     }
   ],
-  "cleanUrls": true,
+  "cleanUrls": false,
   "trailingSlash": false
 }
