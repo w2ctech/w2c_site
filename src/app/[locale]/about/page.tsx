@@ -7,7 +7,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "A small, senior team that builds big. Since 2020 we have delivered software, AI and cloud systems for partners across the EU, US and India.",
+  description:
+    "A small, senior team that builds big. Since 2020 W2C Tech has delivered software, AI and cloud systems for partners across the EU, US and India.",
 };
 
 const FOUNDERS = [

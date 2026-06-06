@@ -7,7 +7,6 @@ import { Card } from "@/components/ui/Card";
 import { Spark, Arrow } from "@/components/ui/Icons";
 import { PageHero } from "@/components/ui/PageHero";
 
-type Location = [string, string, string, boolean];
 const LOCATIONS: Location[] = [
   ["India — HQ", "Rohini, Delhi", "G-4/38, Block-G, Rohini Sector 15, Delhi 110089, India.", true],
   ["European Union", "Hamburg, Germany", "Brooktorkai 4, 20457 Hamburg, Germany.", false],

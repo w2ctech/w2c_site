@@ -23,19 +23,74 @@ export async function POST(request: Request) {
       auth: { user: SMTP_USER, pass: SMTP_PASS },
     });
 
+    const serviceLine = service && service !== "Select a service…" ? service : "General Inquiry";
+    const time = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
+
     await transporter.sendMail({
       from: `"${name}" <${EMAIL_FROM}>`,
       to: EMAIL_TO,
       replyTo: email,
-      subject: `New inquiry from ${name}${company ? ` - ${company}` : ""}`,
+      subject: `New Website Inquiry — ${serviceLine} from ${name}${company ? ` (${company})` : ""}`,
       html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        ${company ? `<p><strong>Company:</strong> ${company}</p>` : ""}
-        ${service ? `<p><strong>Service:</strong> ${service}</p>` : ""}
-        <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, "<br>")}</p>
+        <!DOCTYPE html>
+        <html>
+        <head><meta charset="utf-8"></head>
+        <body style="margin:0;padding:0;background:#1a1a2e;font-family:-apple-system,BlinkMacSystemFont,sans-serif;">
+          <table width="100%" cellpadding="0" cellspacing="0" style="background:#1a1a2e;padding:40px 0;">
+            <tr>
+              <td align="center">
+                <table width="600" cellpadding="0" cellspacing="0" style="background:#12121f;border-radius:14px;overflow:hidden;border:1px solid #2a2a3e;">
+                  <!-- Header -->
+                  <tr>
+                    <td style="background:linear-gradient(135deg,#d4a83a,#b8860b);padding:28px 32px;">
+                      <h1 style="margin:0;font-size:22px;color:#1a1a2e;font-weight:700;">New Website Inquiry</h1>
+                      <p style="margin:6px 0 0;font-size:13px;color:#1a1a2e;opacity:0.8;">W2C Tech — Web to Cloud · ${time} IST</p>
+                    </td>
+                  </tr>
+                  <!-- Body -->
+                  <tr>
+                    <td style="padding:28px 32px;">
+                      <table width="100%" cellpadding="0" cellspacing="0">
+                        ${[
+                          { label: "Name", value: name },
+                          { label: "Email", value: `<a href="mailto:${email}" style="color:#d4a83a;text-decoration:none;">${email}</a>` },
+                          { label: "Company", value: company || "—" },
+                          { label: "Service", value: serviceLine },
+                        ].map((row) => `
+                          <tr>
+                            <td style="padding:10px 0;border-bottom:1px solid #2a2a3e;width:120px;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;color:#8888aa;font-weight:500;">${row.label}</td>
+                            <td style="padding:10px 0;border-bottom:1px solid #2a2a3e;font-size:15px;color:#e8e8f0;">${row.value}</td>
+                          </tr>
+                        `).join("")}
+                      </table>
+                      <!-- Message -->
+                      <div style="margin-top:24px;background:#1a1a2e;border-radius:10px;padding:20px;border:1px solid #2a2a3e;">
+                        <p style="margin:0 0 10px;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;color:#8888aa;font-weight:500;">Message</p>
+                        <p style="margin:0;font-size:15px;color:#c8c8d8;line-height:1.7;white-space:pre-wrap;">${message}</p>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- Footer -->
+                  <tr>
+                    <td style="padding:20px 32px;background:#0e0e1a;border-top:1px solid #2a2a3e;">
+                      <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td style="font-size:12px;color:#666;">
+                            <a href="https://w2ctech.com" style="color:#d4a83a;text-decoration:none;">w2ctech.com</a>
+                            &nbsp;·&nbsp; WhatsApp +91-9626222140
+                            &nbsp;·&nbsp; info@w2ctech.com
+                          </td>
+                          <td align="right" style="font-size:11px;color:#555;">CIN: U72900UP2022PTC168187</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </body>
+        </html>
       `,
     });
 

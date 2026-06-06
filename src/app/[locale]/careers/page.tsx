@@ -6,7 +6,6 @@ import { Eyebrow } from "@/components/ui/Typography";
 import { Card } from "@/components/ui/Card";
 import { Spark, Arrow } from "@/components/ui/Icons";
 import { PageHero, CTASection } from "@/components/ui/PageHero";
-import type { Metadata } from "next";
 
 const ROLES = [
   { name: "Senior Full-Stack Engineer", dept: "Engineering", loc: "Noida / Remote", type: "Full-time", desc: "Own features end-to-end across React, Node and cloud. You will ship product for EU and US clients and mentor the team around you." },

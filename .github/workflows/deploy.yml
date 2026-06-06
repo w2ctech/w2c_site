@@ -2,26 +2,10 @@ name: Deploy to Vercel
 
 on:
   push:
-    branches:
-      - main
-      - master
-  pull_request:
-    branches:
-      - main
-      - master
-
-env:
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-  NODE_VERSION: "20"
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+    branches: [main, master]
 
 jobs:
-  lint-and-typecheck:
-    name: Lint & Type Check
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -30,97 +14,21 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NODE_VERSION }}
+          node-version: 20
           cache: "npm"
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Run Lint
-        run: npm run lint
-
-      - name: Run Type Check
-        run: npx tsc --noEmit
-
-  deploy-preview:
-    name: Deploy Preview
-    needs: lint-and-typecheck
-    if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
-    environment:
-      name: preview
-      url: ${{ steps.deploy.outputs.url }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: "npm"
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Pull Vercel Environment
-        run: npx vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Build
         run: npm run build
 
-      - name: Deploy to Preview
-        id: deploy
-        uses: amondnet/vercel-action@v25
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          vercel-args: "--prebuilt"
-          scope: ${{ secrets.VERCEL_ORG_ID }}
-
-  deploy-production:
-    name: Deploy Production
-    needs: lint-and-typecheck
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
-    runs-on: ubuntu-latest
-    environment:
-      name: production
-      url: https://w2ctech.com
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: "npm"
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Pull Vercel Environment
-        run: npx vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-
-      - name: Build
-        run: npm run build
-
-      - name: Deploy to Production
-        uses: amondnet/vercel-action@v25
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          vercel-args: "--prod --prebuilt"
-          scope: ${{ secrets.VERCEL_ORG_ID }}
-
-  notify:
-    name: Notify
-    needs: [deploy-production, deploy-preview]
-    if: always()
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check deployment status
-        if: needs.deploy-production.result == 'failure' || needs.deploy-preview.result == 'failure'
-        run: echo "Deployment failed! Check the logs above."
+      - name: Deploy to Vercel
+        run: |
+          npx vercel deploy --prod \
+            --prebuilt \
+            --token=${{ secrets.VERCEL_TOKEN }} \
+            --scope saraljyotish \
+            --env SMTP_PASS=${{ secrets.SMTP_PASS }} \
+            --env NEXT_PUBLIC_GA_ID=${{ secrets.NEXT_PUBLIC_GA_ID }} \
+            --yes

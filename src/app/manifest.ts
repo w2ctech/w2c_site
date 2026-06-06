@@ -2,20 +2,18 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "w2ctech - Digital Agency",
-    short_name: "w2ctech",
+    name: "W2C Tech — Web to Cloud · Software, AI & Cloud",
+    short_name: "W2C Tech",
     description:
-      "Digital agency providing web design, development, and marketing services.",
-    start_url: "/",
-    display: "browser",
-    background_color: "#ffffff",
-    theme_color: "#2563eb",
+      "Custom software, AI systems, and cloud for ambitious companies across the EU, US and India.",
+    start_url: "/en",
+    display: "standalone",
+    background_color: "#1a1a2e",
+    theme_color: "#d4a83a",
+    categories: ["technology", "software", "business"],
     icons: [
-      {
-        src: "/icon.svg",
-        sizes: "any",
-        type: "image/svg+xml",
-      },
+      { src: "/icon.svg", sizes: "any", type: "image/svg+xml" },
+      { src: "/favicon.svg", sizes: "32x32", type: "image/svg+xml" },
     ],
   };
 }
