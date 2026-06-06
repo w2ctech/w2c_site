@@ -79,6 +79,11 @@ export function Footer() {
                   w2ctechsolution@gmail.com
                 </a>
               </li>
+              <li>
+                <a href="https://wa.me/919626222140" target="_blank" rel="noopener noreferrer" className="text-on-ink-2 hover:text-accent-ink transition-colors">
+                  WhatsApp +91-9626222140
+                </a>
+              </li>
               <li className="text-[14px] leading-relaxed text-on-ink-2">
                 G-4/38, Block-G, Rohini Sector 15<br />Delhi 110089 — HQ
               </li>

@@ -117,7 +117,10 @@ export default function ContactPage() {
                 <a href="mailto:w2ctechsolution@gmail.com" className="block font-display text-[22px] mt-3.5 mb-1.5 text-on-ink break-all">
                   w2ctechsolution@gmail.com
                 </a>
-                <p className="text-[15px] text-on-ink-2">Prefer email? Reach us directly and we will route you to the right person.</p>
+                <a href="https://wa.me/919626222140" target="_blank" rel="noopener noreferrer" className="block font-display text-[18px] mt-2 text-accent-ink hover:text-accent transition-colors">
+                  WhatsApp +91-9626222140
+                </a>
+                <p className="text-[15px] text-on-ink-2 mt-2">Prefer email or WhatsApp? Reach us directly and we will route you to the right person.</p>
               </Card>
             </Reveal>
             <Reveal delay={80}>
