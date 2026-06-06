@@ -1,7 +1,8 @@
 import Script from "next/script";
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+const GOOGLE_TAG_ID = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID; // GT-XXXXXXX (Google Tag — loader)
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;                 // G-XXXXXXX  (GA4 measurement)
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;               // GTM-XXXXXXX (Tag Manager container)
 const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID;
 const BING_UET_ID = process.env.NEXT_PUBLIC_BING_UET_ID;
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
@@ -10,12 +11,18 @@ const HOTJAR_ID = process.env.NEXT_PUBLIC_HOTJAR_ID;
 const HOTJAR_VERSION = process.env.NEXT_PUBLIC_HOTJAR_VERSION || "6";
 const TWITTER_PIXEL_ID = process.env.NEXT_PUBLIC_TWITTER_PIXEL_ID;
 
+// Prefer the Google Tag (GT-) as the gtag loader because it routes events
+// to every linked destination (GA4, Google Ads, etc.) automatically.
+// Fall back to the GA4 measurement ID when no GT- tag is configured.
+const GTAG_LOADER_ID = GOOGLE_TAG_ID || GA_ID;
+
 /**
  * Multi-vendor analytics loader. Each provider activates only when its
  * env id is present, so production stays opt-in per vendor.
  *
  * Vendors:
- *  - Google Tag Manager (GTM) + Google Analytics 4 (GA4)
+ *  - Google Tag (GT-) + Google Analytics 4 (GA4)
+ *  - Google Tag Manager (GTM, optional, alongside or instead of GT-)
  *  - Microsoft Clarity (heatmaps, session replay)
  *  - Bing UET (Microsoft Advertising)
  *  - Meta Pixel (Facebook / Instagram ads)
@@ -43,15 +50,23 @@ export function Analytics() {
         </>
       )}
 
-      {GA_ID && (
+      {GTAG_LOADER_ID && (
         <>
           <Script
-            id="ga-script"
+            id="gtag-loader"
             strategy="afterInteractive"
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+            src={`https://www.googletagmanager.com/gtag/js?id=${GTAG_LOADER_ID}`}
           />
-          <Script id="ga-config" strategy="afterInteractive">
-            {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','${GA_ID}',{'send_page_view': true});`}
+          <Script id="gtag-init" strategy="afterInteractive">
+            {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());${
+              GOOGLE_TAG_ID ? `gtag('config','${GOOGLE_TAG_ID}',{send_page_view:true});` : ""
+            }${
+              // Configure GA4 explicitly so page_view / web-vitals events
+              // route to the GA4 property even when the GT- tag is the loader.
+              GA_ID && GA_ID !== GOOGLE_TAG_ID
+                ? `gtag('config','${GA_ID}',{send_page_view:true});`
+                : ""
+            }`}
           </Script>
         </>
       )}
